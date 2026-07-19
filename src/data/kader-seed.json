@@ -1,0 +1,1265 @@
+{
+  "version": 1,
+  "players": [
+    {
+      "id": "806c7259-516a-4a4e-924f-965a939ad55c",
+      "name": "Christian Zawieschitzky",
+      "birthDate": "2007-05-02",
+      "position": "GK",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "f7fdee48-57eb-4234-bdff-576e157bd699",
+          "startDate": "2024-09-04",
+          "endDate": "2030-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "559b6468-6016-4e88-a72e-6fd6dc3db3f5",
+          "startDate": "2020-07-16",
+          "endDate": "2024-09-03",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "08d6c48c-18c0-4718-8973-e1690360a40a",
+      "name": "Nikola Sarcevic",
+      "birthDate": "2006-12-27",
+      "position": "GK",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "ca7ba510-b339-4bf0-9dcb-07dfaa7f6070",
+          "startDate": "2025-07-17",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "74b821b8-fff0-4be9-be0b-ada0865ceabc",
+          "startDate": "2016-07-05",
+          "endDate": "2025-07-16",
+          "clubId": "association_club",
+          "clubName": "SC Team Wiener Linien",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "edcc1675-430c-440f-8792-97e834bb6b39",
+      "name": "Kévin Boma",
+      "birthDate": "2002-11-20",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "e5103f21-632e-4238-847e-f89ce8b04e0d",
+          "startDate": "2026-07-07",
+          "endDate": "2031-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "e98dc1bd-7bf2-4ed2-94cf-8e09d78f1872",
+      "name": "Tim Drexler",
+      "birthDate": "2005-03-06",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "33badf75-0aeb-4e66-b448-d2af3a73a52e",
+          "startDate": "2026-01-31",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "9cece347-b337-4e92-b44e-41951effe104",
+      "name": "John Mellberg",
+      "birthDate": "2006-07-30",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "0240d596-7995-4c43-9610-b784bae599d2",
+          "startDate": "2023-07-25",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "00721309-88e2-49c9-962b-c1f3c73e7bf6",
+      "name": "Anrie Chase",
+      "birthDate": "2004-03-24",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "944ac34e-6887-4976-83a5-616b8cb092b5",
+          "startDate": "2025-09-01",
+          "endDate": "2030-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "d71d3ce7-a624-454a-9794-fbd8162cdb14",
+      "name": "Hendry Blank",
+      "birthDate": "2004-08-21",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "c8d6d721-02d9-48ab-854c-ea3796453d2f",
+          "startDate": "2024-02-08",
+          "endDate": "2025-07-08",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "6991f6af-4070-4db5-838c-cf5103b12717",
+          "startDate": "2025-07-08",
+          "endDate": "2026-07-07",
+          "clubId": "foreign_club",
+          "clubName": "Hannover 96",
+          "clubCategory": "FOREIGN_CLUB",
+          "isLoan": true
+        },
+        {
+          "id": "9c197e00-63f3-4797-a456-44e8081b0b9a",
+          "startDate": "2026-07-07",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "e6f4a3e6-af89-4ffe-9283-7c8a7debdf6e",
+      "name": "Valentin Zabransky",
+      "birthDate": "2007-02-02",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "857f1476-2e15-4583-9cdf-12d071f8e9b1",
+          "startDate": "2025-02-05",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "6c74b49a-f4db-4454-8185-8e6efeaa81fe",
+          "startDate": "2020-12-09",
+          "endDate": "2025-02-05",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "962dc15e-35bf-445c-be12-7052cc9c576a",
+      "name": "Dominik Schmid",
+      "birthDate": "1998-03-10",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "3b11681a-f214-47ca-9242-027dc0c7b471",
+          "startDate": "2026-07-01",
+          "endDate": "2030-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "6a4adb50-0084-4483-9fac-a6316a939c00",
+      "name": "Frans Krätzig",
+      "birthDate": "2003-01-14",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "a47d23bb-5d13-4a6d-9caf-9c30a645b11f",
+          "startDate": "2025-06-10",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "d8796420-5ee4-4052-a532-d51ce2c926d9",
+          "startDate": "2024-02-06",
+          "endDate": "2024-07-04",
+          "clubId": "association_club",
+          "clubName": "FK Austria Wien",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "6a65b28a-a973-4840-98a8-d32cf0ab94df",
+      "name": "Aleksa Terzic",
+      "birthDate": "1999-08-17",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "3d0896a3-0cc3-43ea-b6a5-cf3c15f41a44",
+          "startDate": "2023-07-27",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "b4ef6c43-1d3e-4f38-b58e-349aebf8e838",
+      "name": "Leandro Morgalla",
+      "birthDate": "2004-09-13",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "b28e81bd-17af-45ed-9281-0cb6b4cf1272",
+          "startDate": "2026-07-07",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "08634ce9-62f3-4210-967b-c7b567513ac9",
+          "startDate": "2023-07-12",
+          "endDate": "2025-07-07",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "3152e3c2-29bb-44c5-b4bc-dabeb6ca9e1d",
+          "startDate": "2025-07-07",
+          "endDate": "2026-07-07",
+          "clubId": "foreign_club",
+          "clubName": "VfL Bochum",
+          "clubCategory": "FOREIGN_CLUB",
+          "isLoan": true
+        }
+      ]
+    },
+    {
+      "id": "10c0f474-c5d1-40b0-b0ff-c5b301629155",
+      "name": "Nikolas Veratschnig",
+      "birthDate": "2003-01-24",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "e27fbf0d-9637-424e-aef5-933cd14d949b",
+          "startDate": "2026-07-05",
+          "endDate": "2030-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "ae44bd2d-fd6e-4700-880b-ce67d936a12c",
+          "startDate": "2017-08-22",
+          "endDate": "2024-07-04",
+          "clubId": "association_club",
+          "clubName": "RZ Pellets WAC",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "d61211f3-aff4-4257-b217-143a332492c2",
+      "name": "Stefan Lainer",
+      "birthDate": "1992-08-27",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "1d0d5254-871b-4250-af53-3e89d4b867f3",
+          "startDate": "2025-06-10",
+          "endDate": "2027-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "bc96ba86-7c72-42b8-b083-f2168df99485",
+          "startDate": "2015-07-13",
+          "endDate": "2019-07-08",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "e4201d2e-c962-4415-a09d-dff26e5fbb90",
+          "startDate": "2014-06-24",
+          "endDate": "2015-07-13",
+          "clubId": "association_club",
+          "clubName": "SV Josko Ried",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        },
+        {
+          "id": "594da75e-8f4d-4c9b-9c90-605fe689f09c",
+          "startDate": "2012-07-08",
+          "endDate": "2014-06-24",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        },
+        {
+          "id": "4a4ec3c0-b45d-4c8c-9d9d-67fc42c7a34a",
+          "startDate": "2011-07-11",
+          "endDate": "2012-07-08",
+          "clubId": "association_club",
+          "clubName": "SV Scholz Grödig",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": true
+        },
+        {
+          "id": "8f5148c4-1c98-42da-903b-11252ff531dc",
+          "startDate": "2006-07-04",
+          "endDate": "2011-07-11",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "1ea87076-d4fc-4360-a41c-b6351738bf2b",
+      "name": "Soumaïla Diabaté",
+      "birthDate": "2004-11-22",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "532b49af-0560-42e3-97a8-731158436fc2",
+          "startDate": "2025-06-10",
+          "endDate": "2027-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "54b3575c-e753-435f-b3d1-1ee7a85097a8",
+          "startDate": "2024-09-13",
+          "endDate": "2025-06-10",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Blau Weiß Linz",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": true
+        },
+        {
+          "id": "7fd1fb71-f402-4567-b535-5f0fc1490f64",
+          "startDate": "2023-02-14",
+          "endDate": "2024-09-13",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "59219c9a-c1a9-4e4b-96bd-baf66b5b9e13",
+      "name": "Lucas Gourna-Douath",
+      "birthDate": "2003-08-05",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "f75aae6d-8fc6-489e-9c0b-7ad7520c32c1",
+          "startDate": "2026-07-09",
+          "endDate": "2027-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "ac4db14f-8df9-43b6-a2f7-8a334ab96b5d",
+          "startDate": "2026-01-20",
+          "endDate": "2026-07-09",
+          "clubId": "foreign_club",
+          "clubName": "Le Havre AC",
+          "clubCategory": "FOREIGN_CLUB",
+          "isLoan": true
+        },
+        {
+          "id": "3bfd01f6-71b0-4bcd-8b16-db36a9db7503",
+          "startDate": "2025-07-07",
+          "endDate": "2026-01-20",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "68bcefc7-aca4-4968-aca5-92691d0a390d",
+          "startDate": "2025-02-04",
+          "endDate": "2025-07-07",
+          "clubId": "foreign_club",
+          "clubName": "ROMA SPA",
+          "clubCategory": "FOREIGN_CLUB",
+          "isLoan": false
+        },
+        {
+          "id": "3c82985f-d8d9-4d92-9f0c-d28f4764d82d",
+          "startDate": "2022-07-21",
+          "endDate": "2025-02-04",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "3609eb8a-7d34-4d85-bb6c-53a17b24d1e1",
+      "name": "Mamady Diambou",
+      "birthDate": "2002-11-11",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "87306936-135a-4568-af1d-8ef918465ba5",
+          "startDate": "2023-07-20",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "c07bf2ab-75c2-4bf7-8417-6ea5424e666b",
+          "startDate": "2021-01-15",
+          "endDate": "2023-01-19",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "81efceb9-e2a3-41a5-9f74-2554c75b7009",
+          "startDate": "2023-01-19",
+          "endDate": "2023-07-20",
+          "clubId": "foreign_club",
+          "clubName": "FC Luzern",
+          "clubCategory": "FOREIGN_CLUB",
+          "isLoan": true
+        }
+      ]
+    },
+    {
+      "id": "4fabf45b-c6b5-48e1-ab6e-1baa83cba7ff",
+      "name": "Takumu Kawamura",
+      "birthDate": "1999-08-28",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "8ace585e-4123-4f37-8db6-2b5776530c0a",
+          "startDate": "2024-07-05",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "e70862c3-ca24-498f-99be-f34de9e3386d",
+      "name": "Maurits Kjærgaard",
+      "birthDate": "2003-06-26",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "55262112-b01f-4a23-89a0-1b8d1f221853",
+          "startDate": "2019-07-19",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "268badec-8fa3-42d4-bef8-ae41700739cd",
+      "name": "Abubakr Barry",
+      "birthDate": "2000-07-02",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "65e2b82b-b20a-4374-93fa-2e855f446eb9",
+          "startDate": "2026-07-16",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "1b5ad8e5-1e0a-4e84-bb5e-b3127c58c124",
+      "name": "Oliver Lukić",
+      "birthDate": "2006-09-22",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "889e2bcf-1303-4f38-b28d-92f142dbece3",
+          "startDate": "2023-07-24",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "bfbe0ab2-9289-458b-9561-f71b8800e4f2",
+          "startDate": "2022-06-30",
+          "endDate": "2023-07-24",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        },
+        {
+          "id": "7e758128-71db-4b60-ad6e-dd4195fe239d",
+          "startDate": "2012-10-05",
+          "endDate": "2022-06-30",
+          "clubId": "association_club",
+          "clubName": "FK Austria Wien",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "811ee527-ecde-4dcc-9d28-4977fe581286",
+      "name": "Valentin Sulzbacher",
+      "birthDate": "2005-03-11",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "f17902f0-025e-4377-9325-7486a0ef7cc6",
+          "startDate": "2024-07-10",
+          "endDate": "2027-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "2e2a6ba8-c0b1-4f67-a8e0-620be860fdf8",
+          "startDate": "2015-08-19",
+          "endDate": "2024-07-10",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "d23d62b0-2fab-4e97-91e3-37562c5cafc9",
+      "name": "Justin Omoregie",
+      "birthDate": "2003-09-21",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "5032e5a5-8713-4696-94aa-2b1172b26024",
+          "startDate": "2025-07-01",
+          "endDate": "2027-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "fd7b118f-c0db-4125-91bf-b798f18b62fe",
+          "startDate": "2024-07-17",
+          "endDate": "2025-07-01",
+          "clubId": "association_club",
+          "clubName": "TSV Egger Glas Hartberg - Fußball",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": true
+        },
+        {
+          "id": "0433b015-4d88-488a-b35f-c7e7feac0bc6",
+          "startDate": "2022-07-12",
+          "endDate": "2024-07-17",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "077d4196-cd76-4191-973c-dd2587d5ba2b",
+          "startDate": "2017-08-08",
+          "endDate": "2022-07-12",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "74bc76a1-ebcc-400e-a780-60dddb0b66af",
+      "name": "Sota Kitano",
+      "birthDate": "2004-08-13",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "5443f439-96c7-4a2e-a44c-9949aec36c32",
+          "startDate": "2025-06-10",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "b4bd661d-fae2-4ac0-a7bf-a77cbe603d5c",
+      "name": "Bartosz Mazurek",
+      "birthDate": "2007-01-03",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "320d9ea3-32f5-49e0-9340-0d832a31104a",
+          "startDate": "2026-07-08",
+          "endDate": "2031-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "19060f36-147e-400d-8c00-1ff9f2c490c2",
+      "name": "Filip Matijasevic",
+      "birthDate": "2008-03-04",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "9aca1366-b7f7-46dd-bc3b-7e5f5e631d81",
+          "startDate": "2026-07-07",
+          "endDate": "2031-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "bf252e52-85fc-4e3d-bcfd-f841cef2f41b",
+      "name": "Zeteny Jano",
+      "birthDate": "2005-03-13",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "9984f618-ecbe-4145-a6e9-3acc0560c15e",
+          "startDate": "2026-07-01",
+          "endDate": "2027-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "97780006-8434-4b70-bab4-d8b6f4ec5b4d",
+          "startDate": "2025-02-03",
+          "endDate": "2026-07-01",
+          "clubId": "association_club",
+          "clubName": "GAK 1902",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": true
+        },
+        {
+          "id": "1a11950c-bb8c-4d02-97b9-85cfd23266cb",
+          "startDate": "2023-07-10",
+          "endDate": "2025-02-03",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "ebc283f4-a7f5-41e2-bba1-de9f81d58b26",
+          "startDate": "2018-08-10",
+          "endDate": "2023-07-10",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "478800af-d4c9-45fe-acd9-e57dff9cf14b",
+      "name": "Clement Bischoff",
+      "birthDate": "2005-12-16",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "ccddd19a-f34b-4d4b-b477-d005f14cd353",
+          "startDate": "2025-09-03",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "834f8dfa-8575-4e71-b409-011a48e356ec",
+      "name": "Johannes Moser",
+      "birthDate": "2008-01-16",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "441fb0e1-b691-4a19-b13f-2af6d42b1fa1",
+          "startDate": "2026-01-23",
+          "endDate": "2030-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "443bf04f-1b37-469e-97e1-1dc66b6a86a9",
+          "startDate": "2021-07-05",
+          "endDate": "2026-01-23",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "e63eb199-c558-47cb-a497-a296634daaf4",
+      "name": "Aboubacar Camara",
+      "birthDate": "2006-09-30",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "8eefd752-7e09-461a-8d70-8b748eec35f0",
+          "startDate": "2025-01-17",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "25068b38-4f5e-469f-9312-47dcd8392fac",
+      "name": "Adam Daghim",
+      "birthDate": "2005-09-28",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "b9e4afc6-0852-451d-9a32-ada1ca65151d",
+          "startDate": "2026-07-07",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "ff8ec8f1-d9ab-4400-a72d-202c23c95fa6",
+          "startDate": "2025-09-02",
+          "endDate": "2026-07-07",
+          "clubId": "foreign_club",
+          "clubName": "VfL Wolfsburg",
+          "clubCategory": "FOREIGN_CLUB",
+          "isLoan": true
+        },
+        {
+          "id": "f69514b9-c565-46f7-8a9d-812f565fc113",
+          "startDate": "2023-09-01",
+          "endDate": "2025-09-02",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "a353b498-e8ba-4bad-9bd5-20d96f452b58",
+      "name": "Damir Redzic",
+      "birthDate": "2003-03-23",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "35ce756e-0046-4cb7-a5c2-258b2101377a",
+          "startDate": "2026-02-04",
+          "endDate": "2030-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "66a8f13b-d0c0-4b05-ad32-ce01d48a131d",
+      "name": "Karim Konaté",
+      "birthDate": "2004-03-21",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "375186c2-6fd0-4e26-a7ae-df507c6c049d",
+          "startDate": "2022-07-15",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "b2abf576-9ea1-496b-b0dd-0ac16736e09f",
+      "name": "Edmund Baidoo",
+      "birthDate": "2006-01-30",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "b976f7e0-b04a-4dcb-9730-64cbd1d10d03",
+          "startDate": "2024-09-12",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "07f35def-a080-464b-a012-eaa59c9d6eb1",
+      "name": "Yorbe Vertessen",
+      "birthDate": "2001-01-08",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "b94e9b31-dc27-4e98-8391-e3cbe527664a",
+          "startDate": "2025-02-05",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "12232dc2-86eb-416e-9cd2-784e7ca3a213",
+      "name": "Gaoussou Diakité",
+      "birthDate": "2005-09-26",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "8f336c23-2daf-4e58-b5e3-2af85c31df20",
+          "startDate": "2026-07-07",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "f5318cf7-ab41-4710-b06d-b6b1db3cc881",
+          "startDate": "2025-07-11",
+          "endDate": "2026-07-07",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Lausanne",
+          "clubCategory": "FOREIGN_CLUB",
+          "isLoan": true
+        },
+        {
+          "id": "43bdd3a9-84fc-4ae2-af17-e547c0840d3d",
+          "startDate": "2024-01-30",
+          "endDate": "2025-07-11",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "8f4e228e-77f2-42b4-8ba6-da575fee1238",
+      "name": "Haris Tabaković",
+      "birthDate": "1994-06-20",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "9e25cd69-cdfc-44f9-b706-09d214f3a461",
+          "startDate": "2026-07-15",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "b9d8b2ce-ce0e-4805-8d2e-f0b427631027",
+      "name": "Enrique Aguilar",
+      "birthDate": "2007-01-27",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "3f85aaa3-b113-447a-96b7-6f4d0b7ab67f",
+          "startDate": "2023-02-24",
+          "endDate": "2027-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "2d746add-17f1-4faf-8598-ccad238786af",
+      "name": "2er Keeper",
+      "birthDate": "1996-01-01",
+      "position": "GK",
+      "isDummy": true,
+      "contracts": []
+    },
+    {
+      "id": "cd2144ca-e0d6-4d51-8fb8-36bee0bc4c61",
+      "name": "Jakob Pokorny",
+      "birthDate": "2008-02-23",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "cf638296-8bd9-4a9d-8fe1-5318053ec4ec",
+          "startDate": "2026-07-10",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "724e31ac-eb10-47ff-93ac-32d92165dc7f",
+          "startDate": "2022-02-09",
+          "endDate": "2026-07-10",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "5169ef45-ee8a-4b76-b4e7-90a7f96a4482",
+      "name": "Lassina Traoré",
+      "birthDate": "2007-01-10",
+      "position": "DEF",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "55d3ae8c-e4f1-4460-8fb5-30cffeaf86f8",
+          "startDate": "2025-01-14",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "47c5233b-6e8a-4928-82ac-99c2a8c929d9",
+      "name": "Mayker Palacios",
+      "birthDate": "2007-02-19",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "91b80c0b-c738-4982-bc8e-9021b1213487",
+          "startDate": "2025-07-17",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "bcc432fc-cf4e-4e7d-9890-b65be2182021",
+      "name": "Miha Matjašec",
+      "birthDate": "2009-02-22",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "3a8fb21d-eb28-410f-a0c6-1903ce6ab5d7",
+          "startDate": "2025-07-14",
+          "endDate": "2028-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "c3e7acb3-df82-4613-a3f1-eb1b10800ecf",
+      "name": "Filip Aleksic",
+      "birthDate": "2009-06-10",
+      "position": "MID",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "f256e271-ab3e-4ea4-83f3-8ec02f88cac7",
+          "startDate": "2026-07-10",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "ab708a42-f345-486d-842c-b4453aa4e3af",
+          "startDate": "2020-08-06",
+          "endDate": "2026-07-10",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        },
+        {
+          "id": "5130b133-38ff-407e-a6da-962875495c16",
+          "startDate": "2014-11-26",
+          "endDate": "2020-08-06",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "27943872-6078-479a-8d11-09a09ba0cd79",
+      "name": "Oghenetejiri Adejenughure",
+      "birthDate": "2007-02-04",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "fe4d1f0c-f091-4df2-aada-3d8fa3bccd7b",
+          "startDate": "2025-06-03",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "304e2f10-083c-4353-9311-8f8e5f013a9a",
+          "startDate": "2021-02-01",
+          "endDate": "2025-06-03",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "8b6cc146-2dc9-4187-ace7-a42fbabacbf8",
+      "name": "Alexander Murillo",
+      "birthDate": "2006-10-04",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "d1748865-8865-44f0-b479-18a5a892179c",
+          "startDate": "2023-02-08",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "09417edd-bff9-4087-b492-d7af7967aa01",
+      "name": "Phillip Verhounig",
+      "birthDate": "2006-01-05",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "57401cf5-2c00-4f02-b4de-919a7cef4738",
+          "startDate": "2025-06-03",
+          "endDate": "2027-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        },
+        {
+          "id": "7b4f9684-18f9-4765-bdc8-ce1fdb9a60dd",
+          "startDate": "2020-02-03",
+          "endDate": "2025-06-03",
+          "clubId": "association_club",
+          "clubName": "FC Liefering",
+          "clubCategory": "ASSOCIATION_CLUB",
+          "isLoan": false
+        }
+      ]
+    },
+    {
+      "id": "46240eff-94ee-4bc8-a94c-42feb57fc211",
+      "name": "Yerwin Sulbarán",
+      "birthDate": "2008-03-03",
+      "position": "FWD",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "6d021708-132f-415b-bb85-c5eb0ffcf643",
+          "startDate": "2026-07-16",
+          "endDate": "2031-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    }
+  ],
+  "draft": {
+    "listA": [
+      "08d6c48c-18c0-4718-8973-e1690360a40a",
+      "edcc1675-430c-440f-8792-97e834bb6b39",
+      "e98dc1bd-7bf2-4ed2-94cf-8e09d78f1872",
+      "00721309-88e2-49c9-962b-c1f3c73e7bf6",
+      "e6f4a3e6-af89-4ffe-9283-7c8a7debdf6e",
+      "962dc15e-35bf-445c-be12-7052cc9c576a",
+      "6a4adb50-0084-4483-9fac-a6316a939c00",
+      "10c0f474-c5d1-40b0-b0ff-c5b301629155",
+      "d61211f3-aff4-4257-b217-143a332492c2",
+      "1ea87076-d4fc-4360-a41c-b6351738bf2b",
+      "66a8f13b-d0c0-4b05-ad32-ce01d48a131d",
+      "12232dc2-86eb-416e-9cd2-784e7ca3a213",
+      "8f4e228e-77f2-42b4-8ba6-da575fee1238",
+      "07f35def-a080-464b-a012-eaa59c9d6eb1",
+      "a353b498-e8ba-4bad-9bd5-20d96f452b58",
+      "e63eb199-c558-47cb-a497-a296634daaf4",
+      "19060f36-147e-400d-8c00-1ff9f2c490c2",
+      "b4bd661d-fae2-4ac0-a7bf-a77cbe603d5c",
+      "74bc76a1-ebcc-400e-a780-60dddb0b66af",
+      "268badec-8fa3-42d4-bef8-ae41700739cd",
+      "e70862c3-ca24-498f-99be-f34de9e3386d",
+      "4fabf45b-c6b5-48e1-ab6e-1baa83cba7ff",
+      "2d746add-17f1-4faf-8598-ccad238786af"
+    ],
+    "listB": [
+      "9cece347-b337-4e92-b44e-41951effe104",
+      "25068b38-4f5e-469f-9312-47dcd8392fac",
+      "b9d8b2ce-ce0e-4805-8d2e-f0b427631027",
+      "1b5ad8e5-1e0a-4e84-bb5e-b3127c58c124",
+      "811ee527-ecde-4dcc-9d28-4977fe581286",
+      "8b6cc146-2dc9-4187-ace7-a42fbabacbf8",
+      "806c7259-516a-4a4e-924f-965a939ad55c",
+      "b2abf576-9ea1-496b-b0dd-0ac16736e09f"
+    ]
+  }
+}

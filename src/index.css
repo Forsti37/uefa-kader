@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
+
+    /* Salzburg red */
+    --primary: 350 78% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 12%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 44%;
+
+    --accent: 240 5% 94%;
+    --accent-foreground: 240 10% 12%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 70% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 46%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 240 6% 88%;
+    --input: 240 6% 88%;
+    --ring: 350 78% 42%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 96%;
+
+    --card: 240 9% 11%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 240 9% 11%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 350 78% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 18%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 240 5% 18%;
+    --muted-foreground: 240 5% 64%;
+
+    --accent: 240 5% 20%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 60% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 52%;
+    --warning-foreground: 240 10% 8%;
+
+    --border: 240 5% 22%;
+    --input: 240 5% 22%;
+    --ring: 350 78% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply bg-background;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  }
+}

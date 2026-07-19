@@ -29,10 +29,6 @@ export function emptyContract(): ContractPeriod {
 // ---------------------------------------------------------------------------
 
 const TEMPLATE_PLAYERS: Player[] = kaderSeed.players as Player[]
-const TEMPLATE_DRAFT: DraftState = {
-  listA: Array.isArray(kaderSeed.draft?.listA) ? kaderSeed.draft.listA : [],
-  listB: Array.isArray(kaderSeed.draft?.listB) ? kaderSeed.draft.listB : [],
-}
 
 export const TEMPLATE_PLAYER_COUNT = TEMPLATE_PLAYERS.filter(
   (p) => !p.isDummy,
@@ -154,7 +150,8 @@ export const useKaderStore = create<KaderStore>()(
       loadSalzburgTemplate: () =>
         set({
           players: structuredClone(TEMPLATE_PLAYERS),
-          draft: structuredClone(TEMPLATE_DRAFT),
+          // Registrierung immer leer starten - Template liefert nur den Kader.
+          draft: structuredClone(EMPTY_DRAFT),
         }),
 
       clearKader: () => set({ players: [], draft: EMPTY_DRAFT }),
@@ -192,11 +189,11 @@ export const useKaderStore = create<KaderStore>()(
         draft: state.draft,
       }),
       migrate: (persisted, version) => {
-        // v0/v1 → v2: einmalig Seed (Legacy).
+        // v0/v1 → v2: einmalig Seed-Spieler (Legacy), Draft bleibt leer.
         if (version < 2) {
           return {
             players: structuredClone(TEMPLATE_PLAYERS),
-            draft: structuredClone(TEMPLATE_DRAFT),
+            draft: structuredClone(EMPTY_DRAFT),
           }
         }
         // v2 → v3 und spaeter: lokale Daten behalten, nie neu seeden.

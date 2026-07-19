@@ -1226,40 +1226,7 @@
     }
   ],
   "draft": {
-    "listA": [
-      "08d6c48c-18c0-4718-8973-e1690360a40a",
-      "edcc1675-430c-440f-8792-97e834bb6b39",
-      "e98dc1bd-7bf2-4ed2-94cf-8e09d78f1872",
-      "00721309-88e2-49c9-962b-c1f3c73e7bf6",
-      "e6f4a3e6-af89-4ffe-9283-7c8a7debdf6e",
-      "962dc15e-35bf-445c-be12-7052cc9c576a",
-      "6a4adb50-0084-4483-9fac-a6316a939c00",
-      "10c0f474-c5d1-40b0-b0ff-c5b301629155",
-      "d61211f3-aff4-4257-b217-143a332492c2",
-      "1ea87076-d4fc-4360-a41c-b6351738bf2b",
-      "66a8f13b-d0c0-4b05-ad32-ce01d48a131d",
-      "12232dc2-86eb-416e-9cd2-784e7ca3a213",
-      "8f4e228e-77f2-42b4-8ba6-da575fee1238",
-      "07f35def-a080-464b-a012-eaa59c9d6eb1",
-      "a353b498-e8ba-4bad-9bd5-20d96f452b58",
-      "e63eb199-c558-47cb-a497-a296634daaf4",
-      "19060f36-147e-400d-8c00-1ff9f2c490c2",
-      "b4bd661d-fae2-4ac0-a7bf-a77cbe603d5c",
-      "74bc76a1-ebcc-400e-a780-60dddb0b66af",
-      "268badec-8fa3-42d4-bef8-ae41700739cd",
-      "e70862c3-ca24-498f-99be-f34de9e3386d",
-      "4fabf45b-c6b5-48e1-ab6e-1baa83cba7ff",
-      "2d746add-17f1-4faf-8598-ccad238786af"
-    ],
-    "listB": [
-      "9cece347-b337-4e92-b44e-41951effe104",
-      "25068b38-4f5e-469f-9312-47dcd8392fac",
-      "b9d8b2ce-ce0e-4805-8d2e-f0b427631027",
-      "1b5ad8e5-1e0a-4e84-bb5e-b3127c58c124",
-      "811ee527-ecde-4dcc-9d28-4977fe581286",
-      "8b6cc146-2dc9-4187-ace7-a42fbabacbf8",
-      "806c7259-516a-4a4e-924f-965a939ad55c",
-      "b2abf576-9ea1-496b-b0dd-0ac16736e09f"
-    ]
+    "listA": [],
+    "listB": []
   }
 }

@@ -506,24 +506,6 @@
       ]
     },
     {
-      "id": "4fabf45b-c6b5-48e1-ab6e-1baa83cba7ff",
-      "name": "Takumu Kawamura",
-      "birthDate": "1999-08-28",
-      "position": "MID",
-      "isDummy": false,
-      "contracts": [
-        {
-          "id": "8ace585e-4123-4f37-8db6-2b5776530c0a",
-          "startDate": "2024-07-05",
-          "endDate": "2028-06-30",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        }
-      ]
-    },
-    {
       "id": "e70862c3-ca24-498f-99be-f34de9e3386d",
       "name": "Maurits Kjærgaard",
       "birthDate": "2003-06-26",
@@ -555,42 +537,6 @@
           "clubId": "fc_salzburg",
           "clubName": "FC Red Bull Salzburg",
           "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        }
-      ]
-    },
-    {
-      "id": "1b5ad8e5-1e0a-4e84-bb5e-b3127c58c124",
-      "name": "Oliver Lukić",
-      "birthDate": "2006-09-22",
-      "position": "MID",
-      "isDummy": false,
-      "contracts": [
-        {
-          "id": "889e2bcf-1303-4f38-b28d-92f142dbece3",
-          "startDate": "2023-07-24",
-          "endDate": "2029-06-30",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        },
-        {
-          "id": "bfbe0ab2-9289-458b-9561-f71b8800e4f2",
-          "startDate": "2022-06-30",
-          "endDate": "2023-07-24",
-          "clubId": "association_club",
-          "clubName": "FC Liefering",
-          "clubCategory": "ASSOCIATION_CLUB",
-          "isLoan": false
-        },
-        {
-          "id": "7e758128-71db-4b60-ad6e-dd4195fe239d",
-          "startDate": "2012-10-05",
-          "endDate": "2022-06-30",
-          "clubId": "association_club",
-          "clubName": "FK Austria Wien",
-          "clubCategory": "ASSOCIATION_CLUB",
           "isLoan": false
         }
       ]

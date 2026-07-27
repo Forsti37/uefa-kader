@@ -255,25 +255,25 @@ export function KaderVerwaltung() {
           <Table className="table-fixed text-xs sm:text-sm">
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[32%] px-2 sm:w-auto sm:px-3">
+                <TableHead className="w-[28%] px-2 sm:w-auto sm:px-3">
                   Name
                 </TableHead>
-                <TableHead className="w-[18%] px-2 sm:w-auto sm:px-3">
+                <TableHead className="w-[16%] px-2 sm:w-auto sm:px-3">
                   Position
                 </TableHead>
-                <TableHead className="w-[10%] px-1 sm:w-auto sm:px-3">
+                <TableHead className="w-[9%] px-1 sm:w-auto sm:px-3">
                   Alter
                 </TableHead>
                 <TableHead className="hidden px-3 md:table-cell">
                   Phasen
                 </TableHead>
-                <TableHead className="w-[22%] px-2 sm:w-auto sm:px-3">
+                <TableHead className="w-[20%] px-1.5 sm:w-auto sm:px-3">
                   UEFA
                 </TableHead>
-                <TableHead className="w-[12%] px-1 sm:w-auto sm:px-3">
+                <TableHead className="w-[14%] px-1.5 sm:w-auto sm:px-3">
                   Vertrag
                 </TableHead>
-                <TableHead className="w-[10%] px-1 text-right sm:w-auto sm:px-3">
+                <TableHead className="w-[13%] px-1 text-right sm:w-auto sm:px-3">
                   <span className="hidden sm:inline">Aktionen</span>
                 </TableHead>
               </TableRow>
@@ -304,10 +304,15 @@ export function KaderVerwaltung() {
                     <TableCell className="hidden px-3 md:table-cell">
                       {p.contracts.length}
                     </TableCell>
-                    <TableCell className="px-2 sm:px-3">
-                      <PlayerCategoryBadges player={p} />
+                    <TableCell className="overflow-hidden px-1.5 align-top sm:px-3 sm:align-middle">
+                      <div className="sm:hidden">
+                        <PlayerCategoryBadges player={p} compact />
+                      </div>
+                      <div className="hidden sm:block">
+                        <PlayerCategoryBadges player={p} />
+                      </div>
                     </TableCell>
-                    <TableCell className="px-1 sm:px-3">
+                    <TableCell className="whitespace-nowrap px-1.5 align-top sm:px-3 sm:align-middle">
                       <SalzburgContractEnd player={p} compact />
                     </TableCell>
                     <TableCell className="px-1 sm:px-3">

@@ -11,18 +11,21 @@ import {
 } from '@/components/LineupPitchSlotCard'
 import { getFormationDisplayName } from '@/lib/formationTemplates'
 import { resolveSlotPlayers } from '@/lib/lineup'
-import { SQUAD_BOARD_RED, SQUAD_BOARD_WIDTH } from '@/lib/squadRoles'
+import { SQUAD_BOARD_RED } from '@/lib/squadRoles'
 import { useKaderStore } from '@/store'
 
 const PITCH_W = FORMATION_PITCH_W
 const PITCH_H = formationPitchHeight(PITCH_W)
+/** Rand um das Feld – Bildbreite = Feld + dieser Padding. */
+const PITCH_PAD = 14
+const PITCH_BORDER = 4
+
+export const FORMATION_BOARD_WIDTH = PITCH_W + PITCH_PAD * 2 + PITCH_BORDER * 2
 
 const THEME = {
   text: '#dddddd',
   textMuted: '#999999',
 }
-
-export const FORMATION_BOARD_WIDTH = SQUAD_BOARD_WIDTH
 
 export const FormationBoard = forwardRef<HTMLDivElement>(
   function FormationBoard(_props, ref) {
@@ -61,31 +64,26 @@ export const FormationBoard = forwardRef<HTMLDivElement>(
             borderBottom: `3px solid ${SQUAD_BOARD_RED}`,
           }}
         >
-          <div style={{ fontSize: 21, fontWeight: 800 }}>
+          <div style={{ fontSize: 20, fontWeight: 800, lineHeight: 1.25 }}>
             FC Red Bull Salzburg – Aufstellung
           </div>
-          <div style={{ fontSize: 13, color: THEME.textMuted }}>
+          <div style={{ fontSize: 13, color: THEME.textMuted, marginTop: 2 }}>
             {formationLabel} · Stand {stand}
             {lineup.showBackups ? ' · inkl. Backups' : ''}
           </div>
         </div>
 
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            padding: 20,
-          }}
-        >
+        <div style={{ padding: PITCH_PAD }}>
           <div
             style={{
               position: 'relative',
               width: PITCH_W,
               height: PITCH_H,
               borderRadius: 4,
-              border: '4px solid rgba(255,255,255,0.9)',
+              border: `${PITCH_BORDER}px solid rgba(255,255,255,0.9)`,
               overflow: 'hidden',
               boxShadow: '0 4px 24px rgba(0,0,0,0.45)',
+              boxSizing: 'content-box',
             }}
           >
             <PitchSvg

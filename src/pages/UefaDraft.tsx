@@ -22,6 +22,7 @@ import {
   XCircle,
 } from 'lucide-react'
 import type { Player } from '@/types'
+import { sortByPosition } from '@/types'
 import { useKaderStore } from '@/store'
 import {
   ASSOCIATION_TRAINED_MAX,
@@ -43,6 +44,7 @@ import { DateInput } from '@/components/ui/date-input'
 import { Label } from '@/components/ui/label'
 import { DummyDialog } from '@/components/DummyDialog'
 import { RegistrationBoard, BOARD_BG } from '@/components/RegistrationBoard'
+import { PaginatedPlayerList } from '@/components/PaginatedPlayerList'
 
 type ZoneId = 'available' | 'listA' | 'listB'
 
@@ -83,35 +85,39 @@ function DraggablePlayer({
   return (
     <div
       ref={setNodeRef}
-      {...listeners}
-      {...attributes}
       className={cn(
-        'flex touch-none cursor-grab select-none items-center gap-2 rounded-md border bg-card p-2 text-sm active:cursor-grabbing',
+        'flex rounded-md border bg-card text-sm',
         isDragging && 'opacity-40',
       )}
     >
-      <GripVertical className="h-4 w-4 shrink-0 text-muted-foreground" />
-      <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-1.5">
-          <span className="truncate font-medium">{player.name}</span>
-          {player.isDummy && (
-            <Badge variant="outline" className="px-1 py-0 text-[10px]">
-              Dummy
-            </Badge>
-          )}
-        </div>
-        <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-          {player.position}
-          {categoryBadge(player, asOf)}
-          {isListBEligible(player, undefined, asOf) && (
-            <Badge variant="default" className="px-1 py-0 text-[10px]">
-              B
-            </Badge>
-          )}
+      <div
+        {...listeners}
+        {...attributes}
+        className="flex min-w-0 flex-1 touch-none cursor-grab select-none items-center gap-2 p-2 active:cursor-grabbing"
+      >
+        <GripVertical className="h-4 w-4 shrink-0 text-muted-foreground" />
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-1.5">
+            <span className="truncate font-medium">{player.name}</span>
+            {player.isDummy && (
+              <Badge variant="outline" className="px-1 py-0 text-[10px]">
+                Dummy
+              </Badge>
+            )}
+          </div>
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+            {player.position}
+            {categoryBadge(player, asOf)}
+            {isListBEligible(player, undefined, asOf) && (
+              <Badge variant="default" className="px-1 py-0 text-[10px]">
+                B
+              </Badge>
+            )}
+          </div>
         </div>
       </div>
       <div
-        className="flex shrink-0 gap-1"
+        className="flex shrink-0 items-center gap-1 border-l border-border p-1"
         onPointerDown={(e) => e.stopPropagation()}
       >
         <Button
@@ -205,10 +211,22 @@ export function UefaDraft() {
   const resolve = (ids: string[]) =>
     ids.map((id) => byId.get(id)).filter((p): p is Player => Boolean(p))
 
-  const listAPlayers = resolve(draft.listA)
-  const listBPlayers = resolve(draft.listB)
-  const assigned = new Set([...draft.listA, ...draft.listB])
-  const available = players.filter((p) => !assigned.has(p.id))
+  const listAPlayers = useMemo(
+    () => sortByPosition(resolve(draft.listA)),
+    [draft.listA, byId],
+  )
+  const listBPlayers = useMemo(
+    () => sortByPosition(resolve(draft.listB)),
+    [draft.listB, byId],
+  )
+  const assigned = useMemo(
+    () => new Set([...draft.listA, ...draft.listB]),
+    [draft.listA, draft.listB],
+  )
+  const available = useMemo(
+    () => sortByPosition(players.filter((p) => !assigned.has(p.id))),
+    [players, assigned],
+  )
 
   const validation = useMemo(
     () => validateListA(listAPlayers, asOf, listBPlayers),
@@ -301,19 +319,23 @@ export function UefaDraft() {
               <Badge variant="secondary">{available.length}</Badge>
             }
           >
-            {available.length === 0 && (
+            {available.length === 0 ? (
               <p className="text-sm text-muted-foreground">
                 Alle Spieler zugewiesen.
               </p>
-            )}
-            {available.map((p) => (
-              <DraggablePlayer
-                key={p.id}
-                player={p}
-                asOf={asOf}
-                onAssign={(list) => assignToList(p.id, list)}
+            ) : (
+              <PaginatedPlayerList
+                items={available}
+                getKey={(p) => p.id}
+                renderItem={(p) => (
+                  <DraggablePlayer
+                    player={p}
+                    asOf={asOf}
+                    onAssign={(list) => assignToList(p.id, list)}
+                  />
+                )}
               />
-            ))}
+            )}
           </DroppableColumn>
 
           {/* Listen */}

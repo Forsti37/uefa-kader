@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import {
   Download,
   Pencil,
@@ -7,9 +7,10 @@ import {
   Upload,
   Users,
 } from 'lucide-react'
-import { POSITION_LABELS, type Player } from '@/types'
+import { POSITION_LABELS, type Player, sortByPosition } from '@/types'
 import {
   TEMPLATE_PLAYER_COUNT,
+  TEMPLATE_PLAYER_COUNT_CORE,
   useKaderStore,
 } from '@/store'
 import { getAge } from '@/lib/uefaUtils'
@@ -35,6 +36,9 @@ export function KaderVerwaltung() {
   const exportJSON = useKaderStore((s) => s.exportJSON)
   const importJSON = useKaderStore((s) => s.importJSON)
   const loadSalzburgTemplate = useKaderStore((s) => s.loadSalzburgTemplate)
+  const loadSalzburgCoreTemplate = useKaderStore(
+    (s) => s.loadSalzburgCoreTemplate,
+  )
   const clearKader = useKaderStore((s) => s.clearKader)
 
   const [dialogOpen, setDialogOpen] = useState(false)
@@ -42,7 +46,10 @@ export function KaderVerwaltung() {
   const [notice, setNotice] = useState<string | null>(null)
   const fileInput = useRef<HTMLInputElement>(null)
 
-  const realPlayers = players.filter((p) => !p.isDummy)
+  const realPlayers = useMemo(
+    () => sortByPosition(players.filter((p) => !p.isDummy)),
+    [players],
+  )
   const isEmpty = hydrated && realPlayers.length === 0
 
   function flash(message: string) {
@@ -96,14 +103,29 @@ export function KaderVerwaltung() {
     if (
       realPlayers.length > 0 &&
       !window.confirm(
-        'Aktuellen lokalen Kader durch das FC-Salzburg-Template ersetzen?',
+        'Aktuellen lokalen Kader durch das FC-Salzburg-Template (vollständig) ersetzen?',
       )
     ) {
       return
     }
     loadSalzburgTemplate()
     flash(
-      `Template geladen (${TEMPLATE_PLAYER_COUNT} Spieler). Nur lokal in diesem Browser gespeichert.`,
+      `Vollständiges Template geladen (${TEMPLATE_PLAYER_COUNT} Spieler). Nur lokal in diesem Browser gespeichert.`,
+    )
+  }
+
+  function handleLoadCoreTemplate() {
+    if (
+      realPlayers.length > 0 &&
+      !window.confirm(
+        'Aktuellen lokalen Kader durch das Salzburg-Kernkader-Template (ohne Liefering/gelistete Spieler) ersetzen?',
+      )
+    ) {
+      return
+    }
+    loadSalzburgCoreTemplate()
+    flash(
+      `Kernkader geladen (${TEMPLATE_PLAYER_COUNT_CORE} Spieler). Nur lokal in diesem Browser gespeichert.`,
     )
   }
 
@@ -150,7 +172,12 @@ export function KaderVerwaltung() {
           </Button>
           {!isEmpty && (
             <Button variant="outline" onClick={handleLoadTemplate}>
-              <Users /> Template
+              <Users /> Template voll
+            </Button>
+          )}
+          {!isEmpty && (
+            <Button variant="outline" onClick={handleLoadCoreTemplate}>
+              <Users /> Kernkader
             </Button>
           )}
           {!isEmpty && (
@@ -174,12 +201,15 @@ export function KaderVerwaltung() {
           <h2 className="text-lg font-semibold">Noch kein Kader</h2>
           <p className="mx-auto mt-1 max-w-md text-sm text-muted-foreground">
             Es gibt keinen gemeinsamen Online-Kader. Alles bleibt auf deinem
-            Gerät. Du kannst das FC-Salzburg-Beispiel laden, JSON importieren
-            oder Spieler manuell anlegen.
+            Gerät. Du kannst ein Salzburg-Template laden, JSON importieren oder
+            Spieler manuell anlegen.
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
-            <Button onClick={handleLoadTemplate}>
-              <Users /> FC-Salzburg-Template laden ({TEMPLATE_PLAYER_COUNT})
+            <Button onClick={handleLoadCoreTemplate}>
+              <Users /> Kernkader laden ({TEMPLATE_PLAYER_COUNT_CORE})
+            </Button>
+            <Button variant="outline" onClick={handleLoadTemplate}>
+              <Users /> Vollständiges Template ({TEMPLATE_PLAYER_COUNT})
             </Button>
             <Button variant="outline" onClick={() => fileInput.current?.click()}>
               <Upload /> JSON importieren

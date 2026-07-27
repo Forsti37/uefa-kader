@@ -1,5 +1,5 @@
 import { forwardRef, useMemo } from 'react'
-import { compareByPosition, POSITION_LABELS, type Player } from '@/types'
+import { POSITION_LABELS, sortByPosition, type Player } from '@/types'
 import { useKaderStore } from '@/store'
 import {
   isAssociationTrained,
@@ -254,7 +254,7 @@ export const RegistrationBoard = forwardRef<
     const listB = resolve(draft.listB)
     const assigned = new Set([...draft.listA, ...draft.listB])
     const available = players.filter((p) => !assigned.has(p.id))
-    const byPos = (list: Player[]) => [...list].sort(compareByPosition)
+    const byPos = (list: Player[]) => sortByPosition(list)
 
     return {
       clubA: byPos(listA.filter((p) => isClubTrained(p, asOf))),

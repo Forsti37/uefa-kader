@@ -3,22 +3,36 @@ import {
   BookOpen,
   ClipboardList,
   Info,
+  LandPlot,
   LayoutGrid,
   ListChecks,
   Shield,
+  Users2,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { TemplateUpdateBanner } from '@/components/TemplateUpdateBanner'
 import { Hinweise } from '@/pages/Hinweise'
+import { Kaderplanung } from '@/pages/Kaderplanung'
+import { Aufstellung } from '@/pages/Aufstellung'
 import { KaderVerwaltung } from '@/pages/KaderVerwaltung'
 import { KaderUebersicht } from '@/pages/KaderUebersicht'
 import { RegelUebersicht } from '@/pages/RegelUebersicht'
 import { UefaDraft } from '@/pages/UefaDraft'
 
-type PageId = 'verwaltung' | 'uebersicht' | 'draft' | 'regeln' | 'hinweise'
+type PageId =
+  | 'verwaltung'
+  | 'uebersicht'
+  | 'planung'
+  | 'aufstellung'
+  | 'draft'
+  | 'regeln'
+  | 'hinweise'
 
 const NAV: { id: PageId; label: string; icon: typeof ClipboardList }[] = [
   { id: 'verwaltung', label: 'Kader-Verwaltung', icon: ClipboardList },
   { id: 'uebersicht', label: 'Kader-Übersicht', icon: LayoutGrid },
+  { id: 'planung', label: 'Kaderplanung', icon: Users2 },
+  { id: 'aufstellung', label: 'Aufstellung', icon: LandPlot },
   { id: 'draft', label: 'UEFA-Registrierung', icon: ListChecks },
   { id: 'regeln', label: 'Regelübersicht', icon: BookOpen },
   { id: 'hinweise', label: 'Hinweise', icon: Info },
@@ -84,12 +98,20 @@ function App() {
         </div>
       </aside>
 
-      <main className="flex-1 overflow-x-hidden md:h-svh md:overflow-y-auto">
-        {page === 'verwaltung' && <KaderVerwaltung />}
-        {page === 'uebersicht' && <KaderUebersicht />}
-        {page === 'draft' && <UefaDraft />}
-        {page === 'regeln' && <RegelUebersicht />}
-        {page === 'hinweise' && <Hinweise />}
+      <main className="flex min-h-0 flex-1 flex-col overflow-x-hidden md:h-svh md:overflow-y-auto">
+        <TemplateUpdateBanner
+          onOpenVerwaltung={() => setPage('verwaltung')}
+          onOpenPlanung={() => setPage('planung')}
+        />
+        <div className="min-h-0 flex-1">
+          {page === 'verwaltung' && <KaderVerwaltung />}
+          {page === 'uebersicht' && <KaderUebersicht />}
+          {page === 'planung' && <Kaderplanung />}
+          {page === 'aufstellung' && <Aufstellung />}
+          {page === 'draft' && <UefaDraft />}
+          {page === 'regeln' && <RegelUebersicht />}
+          {page === 'hinweise' && <Hinweise />}
+        </div>
       </main>
     </div>
   )

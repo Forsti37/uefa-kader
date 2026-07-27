@@ -2,6 +2,7 @@ import { useMemo, useState, type ReactNode } from 'react'
 import { CalendarClock, Filter, TrendingUp } from 'lucide-react'
 import {
   POSITION_LABELS,
+  sortByPosition,
   UEFA_CATEGORY_LABELS,
   type Player,
   type Position,
@@ -36,7 +37,7 @@ function formatDate(iso: string): string {
 export function KaderUebersicht() {
   const players = useKaderStore((s) => s.players)
   const realPlayers = useMemo(
-    () => players.filter((p) => !p.isDummy),
+    () => sortByPosition(players.filter((p) => !p.isDummy)),
     [players],
   )
 
@@ -56,7 +57,8 @@ export function KaderUebersicht() {
   }, [realPlayers])
 
   const filtered = useMemo(() => {
-    return realPlayers.filter((p) => {
+    return sortByPosition(
+      realPlayers.filter((p) => {
       const age = getAge(p.birthDate)
       if (minAge && age < Number(minAge)) return false
       if (maxAge && age > Number(maxAge)) return false
@@ -78,7 +80,8 @@ export function KaderUebersicht() {
         if (!dates.some((d) => d <= reachableBy)) return false
       }
       return true
-    })
+    }),
+    )
   }, [
     realPlayers,
     minAge,

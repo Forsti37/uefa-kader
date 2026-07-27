@@ -80,6 +80,11 @@ export function compareByPosition(a: Player, b: Player): number {
   return a.name.localeCompare(b.name, 'de')
 }
 
+/** Kopie der Liste, sortiert Torhüter → Abwehr → Mittelfeld → Angriff. */
+export function sortByPosition(players: Player[]): Player[] {
+  return [...players].sort(compareByPosition)
+}
+
 /** Ableitbare UEFA-Ausbildungskategorie eines Spielers. */
 export type UefaCategory = 'CTP' | 'ATP' | 'NON_LOCAL'
 
@@ -93,4 +98,53 @@ export const UEFA_CATEGORY_LABELS: Record<UefaCategory, string> = {
 export interface DraftState {
   listA: string[]
   listB: string[]
+}
+
+/** Gruppierung von Rollen (z. B. Tor, Abwehr) für Planung und Export. */
+export interface SquadCategory {
+  id: string
+  label: string
+}
+
+/** Eine definierbare Rolle/Position in der Kaderplanung (z. B. TW, IV, ST). */
+export interface SquadRole {
+  id: string
+  label: string
+  categoryId?: string | null
+}
+
+/** Zuweisungen Rolle → Spieler-IDs (mehrere pro Rolle, Spieler auch in mehreren Rollen). */
+export interface SquadPlanState {
+  categories: SquadCategory[]
+  roles: SquadRole[]
+  assignments: Record<string, string[]>
+}
+
+export type FormationSlotTemplate = {
+  key: string
+  label: string
+  x: number
+  y: number
+}
+
+/** Eigene Aufstellungs-Vorlage (Name + Slot-Labels/Koordinaten). */
+export interface CustomFormation {
+  id: string
+  name: string
+  slots: FormationSlotTemplate[]
+}
+
+export interface LineupSlotState {
+  key: string
+  label: string
+  x: number
+  y: number
+  roleId: string | null
+  playerId: string | null
+}
+
+export interface LineupState {
+  formationId: string
+  showBackups: boolean
+  slots: LineupSlotState[]
 }

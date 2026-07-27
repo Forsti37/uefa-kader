@@ -12,6 +12,7 @@ import {
   SQUAD_BOARD_WIDTH,
   type BoardCategoryAccent,
 } from '@/lib/squadRoles'
+import { salzburgContractEndYear } from '@/lib/uefaUtils'
 
 const THEME = {
   bg: BOARD_BG,
@@ -43,6 +44,8 @@ function PlayerRow({
   rank: number
   labels: string[]
 }) {
+  const contractYear = salzburgContractEndYear(player)
+
   return (
     <div
       style={{
@@ -82,6 +85,40 @@ function PlayerRow({
           {rank}.
         </span>
         <span style={{ fontWeight: 600 }}>{player.name}</span>
+        {contractYear != null && (
+          <span
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 3,
+              marginLeft: 6,
+              color: THEME.textMuted,
+              fontSize: 11,
+              fontWeight: 600,
+              verticalAlign: 'middle',
+            }}
+            title={`Vertragsende FC Salzburg ${contractYear}`}
+          >
+            <svg
+              width="11"
+              height="11"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+              <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+              <path d="M10 9H8" />
+              <path d="M16 13H8" />
+              <path d="M16 17H8" />
+            </svg>
+            {contractYear}
+          </span>
+        )}
       </span>
       <span style={{ display: 'flex', gap: 3, flexShrink: 0 }}>
         {labels.map((l) => (

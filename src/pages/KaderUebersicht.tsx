@@ -22,6 +22,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Select } from '@/components/ui/select'
 import { PlayerCategoryBadges } from '@/components/UefaBadges'
+import { SalzburgContractEnd } from '@/components/SalzburgContractEnd'
 
 type PositionFilter = Position | 'ALL'
 type CategoryFilter = UefaCategory | 'ALL'
@@ -229,7 +230,10 @@ function PlayerCard({
           </div>
         </div>
         <PlayerCategoryBadges player={player} />
-        <ProjectionLine projection={projection} />
+        <div className="space-y-1">
+          <SalzburgContractEnd player={player} className="text-xs" />
+          <ProjectionLine projection={projection} />
+        </div>
       </CardContent>
     </Card>
   )

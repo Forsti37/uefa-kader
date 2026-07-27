@@ -26,6 +26,7 @@ import {
 import { Dialog } from '@/components/ui/dialog'
 import { PlayerForm } from '@/components/PlayerForm'
 import { PlayerCategoryBadges } from '@/components/UefaBadges'
+import { SalzburgContractEnd } from '@/components/SalzburgContractEnd'
 
 export function KaderVerwaltung() {
   const players = useKaderStore((s) => s.players)
@@ -231,6 +232,7 @@ export function KaderVerwaltung() {
                 <TableHead>Alter</TableHead>
                 <TableHead>Phasen</TableHead>
                 <TableHead>UEFA-Status</TableHead>
+                <TableHead>Vertragsende</TableHead>
                 <TableHead className="text-right">Aktionen</TableHead>
               </TableRow>
             </TableHeader>
@@ -239,7 +241,7 @@ export function KaderVerwaltung() {
                 <TableRow>
                   <TableCell
                     className="py-8 text-center text-muted-foreground"
-                    colSpan={6}
+                    colSpan={7}
                   >
                     Lade …
                   </TableCell>
@@ -254,6 +256,9 @@ export function KaderVerwaltung() {
                     <TableCell>{p.contracts.length}</TableCell>
                     <TableCell>
                       <PlayerCategoryBadges player={p} />
+                    </TableCell>
+                    <TableCell>
+                      <SalzburgContractEnd player={p} />
                     </TableCell>
                     <TableCell>
                       <div className="flex justify-end gap-1">

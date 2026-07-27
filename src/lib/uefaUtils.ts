@@ -90,6 +90,41 @@ export function getAge(birthDate: string, at: Date = new Date()): number {
   return age
 }
 
+/**
+ * Jahr des Vertragsendes beim FC Red Bull Salzburg (`FC_SALZBURG`).
+ * Nimmt die Phase, die den Stichtag abdeckt; sonst das späteste Ende.
+ */
+export function salzburgContractEndYear(
+  player: Player,
+  asOf: Date = new Date(),
+): number | null {
+  const periods = player.contracts.filter(
+    (c) =>
+      c.clubCategory === 'FC_SALZBURG' &&
+      typeof c.endDate === 'string' &&
+      /^\d{4}-\d{2}-\d{2}$/.test(c.endDate),
+  )
+  if (periods.length === 0) return null
+
+  const asOfMs = Date.UTC(
+    asOf.getFullYear(),
+    asOf.getMonth(),
+    asOf.getDate(),
+  )
+  const covering = periods.filter((c) => {
+    const start = parseDate(c.startDate).getTime()
+    const end = parseDate(c.endDate).getTime()
+    return start <= asOfMs && end >= asOfMs
+  })
+  const pool = covering.length > 0 ? covering : periods
+  let bestEnd = parseDate(pool[0]!.endDate)
+  for (let i = 1; i < pool.length; i++) {
+    const end = parseDate(pool[i]!.endDate)
+    if (end.getTime() > bestEnd.getTime()) bestEnd = end
+  }
+  return bestEnd.getUTCFullYear()
+}
+
 // ---------------------------------------------------------------------------
 // Intervall-Helfer (Ueberlappungsbereinigung der Vertragsphasen)
 // ---------------------------------------------------------------------------

@@ -36,6 +36,7 @@ import type { Player } from '@/types'
 import { POSITION_LABELS, sortByPosition } from '@/types'
 import { SQUAD_CATEGORY_TEMPLATE_COUNT, SQUAD_ROLE_TEMPLATE_COUNT, SQUAD_BOARD_WIDTH } from '@/lib/squadRoles'
 import { useKaderStore } from '@/store'
+import { SalzburgContractEnd } from '@/components/SalzburgContractEnd'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -100,7 +101,8 @@ function DraggablePlayerCard({ player }: { player: Player }) {
             </Badge>
           )}
         </div>
-        <span className="text-xs text-muted-foreground">
+        <span className="flex items-center gap-2.5 text-xs text-muted-foreground">
+          <SalzburgContractEnd player={player} compact />
           {POSITION_LABELS[player.position]}
         </span>
       </div>
@@ -904,7 +906,8 @@ function SortableAssignedPlayer({
           Dummy
         </Badge>
       )}
-      <span className="hidden shrink-0 text-xs text-muted-foreground sm:inline">
+      <span className="hidden shrink-0 items-center gap-2.5 text-xs text-muted-foreground sm:inline-flex">
+        <SalzburgContractEnd player={player} compact />
         {POSITION_LABELS[player.position]}
       </span>
       <Button

@@ -9,6 +9,7 @@ import {
   getUefaCategory,
   isAssociationTrained,
   isClubTrained,
+  salzburgContractEndYear,
   isListBEligible,
   isLocallyTrained,
   isU21ForListB,
@@ -600,5 +601,53 @@ describe('validateListA', () => {
     expect(res.maxAllowed).toBe(24)
     // Non-Local-Limit: 24 - 3 - 5 = 16 (5. ATP belegt trotzdem einen Platz)
     expect(res.nonLocalMax).toBe(16)
+  })
+})
+
+describe('salzburgContractEndYear', () => {
+  it('returns year of covering FC_SALZBURG contract', () => {
+    const p = player({
+      birthDate: '2000-01-01',
+      contracts: [
+        contract({
+          startDate: '2020-07-01',
+          endDate: '2022-06-30',
+          clubCategory: 'FC_SALZBURG',
+        }),
+        contract({
+          startDate: '2022-07-01',
+          endDate: '2028-06-30',
+          clubCategory: 'FC_SALZBURG',
+        }),
+      ],
+    })
+    expect(
+      salzburgContractEndYear(p, new Date(Date.UTC(2026, 0, 15))),
+    ).toBe(2028)
+  })
+
+  it('falls back to latest Salzburg end when none covers asOf', () => {
+    const p = player({
+      birthDate: '2000-01-01',
+      contracts: [
+        contract({
+          startDate: '2018-07-01',
+          endDate: '2020-06-30',
+          clubCategory: 'FC_SALZBURG',
+        }),
+        contract({
+          startDate: '2021-07-01',
+          endDate: '2024-06-30',
+          clubCategory: 'ASSOCIATION_CLUB',
+        }),
+      ],
+    })
+    expect(
+      salzburgContractEndYear(p, new Date(Date.UTC(2026, 0, 15))),
+    ).toBe(2020)
+  })
+
+  it('returns null without Salzburg contracts', () => {
+    expect(salzburgContractEndYear(makeNonLocal())).toBeNull()
   })
 })

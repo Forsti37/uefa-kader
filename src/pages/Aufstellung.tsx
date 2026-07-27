@@ -16,7 +16,6 @@ import type { Player } from '@/types'
 import { POSITION_LABELS, sortByPosition } from '@/types'
 import { listFormations, type FormationId } from '@/lib/formationTemplates'
 import { lineupHasAssignments } from '@/lib/lineup'
-import { FORMATION_BOARD_WIDTH } from '@/components/FormationBoard'
 import { FormationManagerDialog } from '@/components/FormationManagerDialog'
 import {
   FormationField,
@@ -161,17 +160,17 @@ export function Aufstellung() {
   }
 
   return (
-    <div className="mx-auto max-w-7xl space-y-6 p-6">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+    <div className="mx-auto max-w-7xl space-y-4 p-4 sm:space-y-6 sm:p-6">
+      <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="min-w-0">
-          <h1 className="text-2xl font-bold">Aufstellung</h1>
+          <h1 className="text-xl font-bold sm:text-2xl">Aufstellung</h1>
           <p className="text-sm text-muted-foreground">
             Tor unten, Sturm oben · Rolle am Feld wählen oder Spieler
             hineinziehen
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          <div className="flex min-w-0 flex-1 items-center gap-2 sm:flex-none">
             <Label
               htmlFor="formation"
               className="shrink-0 text-xs text-muted-foreground"
@@ -184,7 +183,7 @@ export function Aufstellung() {
               onChange={(e) =>
                 handleFormationChange(e.target.value as FormationId)
               }
-              className="h-9 min-w-[10rem]"
+              className="h-9 min-w-0 flex-1 sm:min-w-[10rem] sm:flex-none"
             >
               {formationOptions.map((f) => (
                 <option key={f.id} value={f.id}>
@@ -196,6 +195,7 @@ export function Aufstellung() {
           <Button
             type="button"
             variant="outline"
+            size="sm"
             className="h-9 shrink-0"
             onClick={() => setFormationManagerOpen(true)}
           >
@@ -208,14 +208,17 @@ export function Aufstellung() {
               checked={lineup.showBackups}
               onChange={(e) => setLineupShowBackups(e.target.checked)}
             />
-            Backups anzeigen
+            Backups
           </label>
           <Button
             variant="outline"
+            size="sm"
             className="h-9 shrink-0"
             onClick={() => clearLineupAll()}
           >
-            <RotateCcw className="h-4 w-4" /> Alle Slots leeren
+            <RotateCcw className="h-4 w-4" />{' '}
+            <span className="hidden sm:inline">Alle Slots leeren</span>
+            <span className="sm:hidden">Leeren</span>
           </Button>
         </div>
       </div>
@@ -283,12 +286,7 @@ export function Aufstellung() {
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto rounded-md border bg-background p-2">
-            <div
-              className="mx-auto w-full"
-              style={{ maxWidth: FORMATION_BOARD_WIDTH }}
-            >
-              <FormationBoard ref={boardRef} />
-            </div>
+            <FormationBoard ref={boardRef} />
           </div>
         </CardContent>
       </Card>

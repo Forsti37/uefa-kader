@@ -48,7 +48,7 @@ export const FormationBoard = forwardRef<HTMLDivElement>(
         ref={ref}
         style={{
           width: FORMATION_BOARD_WIDTH,
-          maxWidth: '100%',
+          minWidth: FORMATION_BOARD_WIDTH,
           boxSizing: 'border-box',
           background: BOARD_BG,
           color: THEME.text,

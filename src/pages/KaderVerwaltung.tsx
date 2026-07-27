@@ -143,17 +143,17 @@ export function KaderVerwaltung() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl space-y-6 p-6">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-bold">Kader-Verwaltung</h1>
+    <div className="mx-auto max-w-6xl space-y-4 p-4 sm:space-y-6 sm:p-6">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <div className="min-w-0">
+          <h1 className="text-xl font-bold sm:text-2xl">Kader-Verwaltung</h1>
           <p className="text-sm text-muted-foreground">
             {hydrated
               ? `${realPlayers.length} Spieler · nur lokal in diesem Browser`
               : 'Lade lokalen Stand …'}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           <input
             ref={fileInput}
             type="file"
@@ -161,32 +161,60 @@ export function KaderVerwaltung() {
             className="hidden"
             onChange={handleImportFile}
           />
-          <Button variant="outline" onClick={() => fileInput.current?.click()}>
+          <Button
+            variant="outline"
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
+            onClick={() => fileInput.current?.click()}
+          >
             <Upload /> Import
           </Button>
           <Button
             variant="outline"
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
             onClick={handleExport}
             disabled={!hydrated || players.length === 0}
           >
             <Download /> Export
           </Button>
           {!isEmpty && (
-            <Button variant="outline" onClick={handleLoadTemplate}>
-              <Users /> Template voll
+            <Button
+              variant="outline"
+              size="sm"
+              className="sm:h-9 sm:px-4 sm:text-sm"
+              onClick={handleLoadTemplate}
+            >
+              <Users />{' '}
+              <span className="hidden sm:inline">Template voll</span>
+              <span className="sm:hidden">Voll</span>
             </Button>
           )}
           {!isEmpty && (
-            <Button variant="outline" onClick={handleLoadCoreTemplate}>
+            <Button
+              variant="outline"
+              size="sm"
+              className="sm:h-9 sm:px-4 sm:text-sm"
+              onClick={handleLoadCoreTemplate}
+            >
               <Users /> Kernkader
             </Button>
           )}
           {!isEmpty && (
-            <Button variant="outline" onClick={handleClear}>
+            <Button
+              variant="outline"
+              size="sm"
+              className="sm:h-9 sm:px-4 sm:text-sm"
+              onClick={handleClear}
+            >
               Leeren
             </Button>
           )}
-          <Button onClick={openNew}>
+          <Button
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
+            onClick={openNew}
+          >
             <Plus /> Spieler
           </Button>
         </div>
@@ -224,16 +252,30 @@ export function KaderVerwaltung() {
 
       {(!hydrated || !isEmpty) && (
         <div className="rounded-lg border bg-card">
-          <Table>
+          <Table className="table-fixed text-xs sm:text-sm">
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
-                <TableHead>Position</TableHead>
-                <TableHead>Alter</TableHead>
-                <TableHead>Phasen</TableHead>
-                <TableHead>UEFA-Status</TableHead>
-                <TableHead>Vertragsende</TableHead>
-                <TableHead className="text-right">Aktionen</TableHead>
+                <TableHead className="w-[32%] px-2 sm:w-auto sm:px-3">
+                  Name
+                </TableHead>
+                <TableHead className="w-[18%] px-2 sm:w-auto sm:px-3">
+                  Position
+                </TableHead>
+                <TableHead className="w-[10%] px-1 sm:w-auto sm:px-3">
+                  Alter
+                </TableHead>
+                <TableHead className="hidden px-3 md:table-cell">
+                  Phasen
+                </TableHead>
+                <TableHead className="w-[22%] px-2 sm:w-auto sm:px-3">
+                  UEFA
+                </TableHead>
+                <TableHead className="w-[12%] px-1 sm:w-auto sm:px-3">
+                  Vertrag
+                </TableHead>
+                <TableHead className="w-[10%] px-1 text-right sm:w-auto sm:px-3">
+                  <span className="hidden sm:inline">Aktionen</span>
+                </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -250,21 +292,30 @@ export function KaderVerwaltung() {
               {hydrated &&
                 realPlayers.map((p) => (
                   <TableRow key={p.id}>
-                    <TableCell className="font-medium">{p.name}</TableCell>
-                    <TableCell>{POSITION_LABELS[p.position]}</TableCell>
-                    <TableCell>{getAge(p.birthDate)}</TableCell>
-                    <TableCell>{p.contracts.length}</TableCell>
-                    <TableCell>
+                    <TableCell className="truncate px-2 font-medium sm:px-3">
+                      {p.name}
+                    </TableCell>
+                    <TableCell className="truncate px-2 sm:px-3">
+                      {POSITION_LABELS[p.position]}
+                    </TableCell>
+                    <TableCell className="px-1 sm:px-3">
+                      {getAge(p.birthDate)}
+                    </TableCell>
+                    <TableCell className="hidden px-3 md:table-cell">
+                      {p.contracts.length}
+                    </TableCell>
+                    <TableCell className="px-2 sm:px-3">
                       <PlayerCategoryBadges player={p} />
                     </TableCell>
-                    <TableCell>
-                      <SalzburgContractEnd player={p} />
+                    <TableCell className="px-1 sm:px-3">
+                      <SalzburgContractEnd player={p} compact />
                     </TableCell>
-                    <TableCell>
-                      <div className="flex justify-end gap-1">
+                    <TableCell className="px-1 sm:px-3">
+                      <div className="flex justify-end gap-0.5">
                         <Button
                           variant="ghost"
                           size="icon"
+                          className="h-8 w-8"
                           onClick={() => openEdit(p)}
                           aria-label="Bearbeiten"
                         >
@@ -273,7 +324,7 @@ export function KaderVerwaltung() {
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="text-destructive"
+                          className="h-8 w-8 text-destructive"
                           onClick={() => removePlayer(p.id)}
                           aria-label="Löschen"
                         >

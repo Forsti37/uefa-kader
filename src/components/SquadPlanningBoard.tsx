@@ -337,7 +337,7 @@ export const SquadPlanningBoard = forwardRef<HTMLDivElement>(
         ref={ref}
         style={{
           width: SQUAD_BOARD_WIDTH,
-          maxWidth: '100%',
+          minWidth: SQUAD_BOARD_WIDTH,
           boxSizing: 'border-box',
           background: THEME.bg,
           color: THEME.text,

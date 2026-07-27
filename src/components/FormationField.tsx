@@ -1,5 +1,6 @@
 import { useDroppable } from '@dnd-kit/core'
 import {
+  useEffect,
   useRef,
   useState,
   type PointerEvent as ReactPointerEvent,
@@ -52,14 +53,30 @@ export function FormationField({
   onMoveSlot,
   onRenameSlot,
 }: FormationFieldProps) {
+  const outerRef = useRef<HTMLDivElement>(null)
   const pitchRef = useRef<HTMLDivElement>(null)
   const onMoveSlotRef = useRef(onMoveSlot)
   onMoveSlotRef.current = onMoveSlot
+  const [scale, setScale] = useState(1)
   const [dragPreview, setDragPreview] = useState<{
     key: string
     x: number
     y: number
   } | null>(null)
+
+  useEffect(() => {
+    const el = outerRef.current
+    if (!el || typeof ResizeObserver === 'undefined') return
+    const update = () => {
+      const w = el.clientWidth
+      if (w <= 0) return
+      setScale(Math.min(1, w / PITCH_W))
+    }
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
 
   function pointerToPitchCoords(clientX: number, clientY: number) {
     const el = pitchRef.current
@@ -113,49 +130,58 @@ export function FormationField({
         ersten Verschieben einer System-Formation wird automatisch eine eigene
         Kopie angelegt.
       </p>
-      <div className="flex w-full justify-center overflow-x-auto">
+      <div ref={outerRef} className="w-full">
         <div
-          ref={pitchRef}
-          className="relative shrink-0"
+          className="relative mx-auto"
           style={{
-            width: PITCH_W,
-            height: PITCH_H,
-            maxWidth: '100%',
+            width: PITCH_W * scale,
+            height: PITCH_H * scale,
           }}
         >
           <div
-            className="absolute inset-0 overflow-hidden rounded-md border-4 border-white/90 shadow-lg"
-            aria-hidden
+            ref={pitchRef}
+            className="absolute left-0 top-0"
+            style={{
+              width: PITCH_W,
+              height: PITCH_H,
+              transform: `scale(${scale})`,
+              transformOrigin: 'top left',
+            }}
           >
-            <PitchSvg
-              className="absolute inset-0 h-full w-full"
-              patternId="pitch-ui"
-            />
-          </div>
-
-          {slots.map((slot) => {
-            const preview =
-              dragPreview?.key === slot.key ? dragPreview : null
-            const x = preview?.x ?? slot.x
-            const y = preview?.y ?? slot.y
-            return (
-              <FormationSlotMarker
-                key={slot.key}
-                slot={slot}
-                x={x}
-                y={y}
-                dragging={Boolean(preview)}
-                showBackups={showBackups}
-                squadPlan={squadPlan}
-                roles={roles}
-                playersById={playersById}
-                onAssignRole={onAssignRole}
-                onClearSlot={onClearSlot}
-                onRenameSlot={onRenameSlot}
-                onLayoutPointerDown={(e) => beginLayoutDrag(slot.key, e)}
+            <div
+              className="absolute inset-0 overflow-hidden rounded-md border-4 border-white/90 shadow-lg"
+              aria-hidden
+            >
+              <PitchSvg
+                className="absolute inset-0 h-full w-full"
+                patternId="pitch-ui"
               />
-            )
-          })}
+            </div>
+
+            {slots.map((slot) => {
+              const preview =
+                dragPreview?.key === slot.key ? dragPreview : null
+              const x = preview?.x ?? slot.x
+              const y = preview?.y ?? slot.y
+              return (
+                <FormationSlotMarker
+                  key={slot.key}
+                  slot={slot}
+                  x={x}
+                  y={y}
+                  dragging={Boolean(preview)}
+                  showBackups={showBackups}
+                  squadPlan={squadPlan}
+                  roles={roles}
+                  playersById={playersById}
+                  onAssignRole={onAssignRole}
+                  onClearSlot={onClearSlot}
+                  onRenameSlot={onRenameSlot}
+                  onLayoutPointerDown={(e) => beginLayoutDrag(slot.key, e)}
+                />
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>

@@ -43,10 +43,10 @@ function App() {
 
   return (
     <div className="flex min-h-svh flex-col bg-background text-foreground md:h-svh md:flex-row md:overflow-hidden">
-      <aside className="sticky top-0 z-30 flex flex-col gap-1 border-b bg-card p-4 md:static md:h-svh md:w-64 md:shrink-0 md:border-b-0 md:border-r">
-        <div className="mb-4 flex items-center gap-3 px-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground">
-            <Shield className="h-6 w-6" />
+      <aside className="sticky top-0 z-30 flex flex-col gap-1 border-b bg-card p-3 sm:p-4 md:static md:h-svh md:w-64 md:shrink-0 md:border-b-0 md:border-r">
+        <div className="mb-2 flex items-center gap-3 px-2 md:mb-4">
+          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground md:h-10 md:w-10">
+            <Shield className="h-5 w-5 md:h-6 md:w-6" />
           </div>
           <div className="leading-tight">
             <div className="font-bold">Kaderplaner</div>
@@ -56,7 +56,7 @@ function App() {
           </div>
         </div>
 
-        <nav className="flex gap-1 overflow-x-auto md:flex-col md:overflow-visible">
+        <nav className="flex gap-1 overflow-x-auto pb-1 md:flex-col md:overflow-visible md:pb-0">
           {NAV.map((item) => {
             const Icon = item.icon
             const active = page === item.id
@@ -66,14 +66,14 @@ function App() {
                 type="button"
                 onClick={() => setPage(item.id)}
                 className={cn(
-                  'flex flex-1 items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors md:flex-none',
+                  'flex shrink-0 items-center gap-2 rounded-md px-2.5 py-2 text-sm font-medium transition-colors md:flex-none md:px-3',
                   active
                     ? 'bg-primary text-primary-foreground'
                     : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
                 )}
               >
                 <Icon className="h-4 w-4 shrink-0" />
-                <span className="truncate">{item.label}</span>
+                <span className="whitespace-nowrap md:truncate">{item.label}</span>
               </button>
             )
           })}

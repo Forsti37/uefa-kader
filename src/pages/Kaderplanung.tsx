@@ -34,7 +34,7 @@ import {
 } from 'lucide-react'
 import type { Player } from '@/types'
 import { POSITION_LABELS, sortByPosition } from '@/types'
-import { SQUAD_CATEGORY_TEMPLATE_COUNT, SQUAD_ROLE_TEMPLATE_COUNT, SQUAD_BOARD_WIDTH } from '@/lib/squadRoles'
+import { SQUAD_CATEGORY_TEMPLATE_COUNT, SQUAD_ROLE_TEMPLATE_COUNT } from '@/lib/squadRoles'
 import { useKaderStore } from '@/store'
 import { SalzburgContractEnd } from '@/components/SalzburgContractEnd'
 import { cn } from '@/lib/utils'
@@ -334,16 +334,16 @@ export function Kaderplanung() {
   const noRoles = squadPlan.roles.length === 0
 
   return (
-    <div className="mx-auto max-w-7xl space-y-6 p-6">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-bold">Kaderplanung</h1>
+    <div className="mx-auto max-w-7xl space-y-4 p-4 sm:space-y-6 sm:p-6">
+      <div className="flex flex-col gap-3 sm:gap-3 lg:flex-row lg:items-start lg:justify-between">
+        <div className="min-w-0">
+          <h1 className="text-xl font-bold sm:text-2xl">Kaderplanung</h1>
           <p className="text-sm text-muted-foreground">
-            Mehrere Spieler pro Rolle · Reihenfolge = Priorität (per Drag
-            sortieren) · ein Spieler in mehreren Rollen möglich
+            Mehrere Spieler pro Rolle · Reihenfolge = Priorität · ein Spieler in
+            mehreren Rollen möglich
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           <input
             ref={fileInput}
             type="file"
@@ -351,30 +351,68 @@ export function Kaderplanung() {
             className="hidden"
             onChange={handleImportFile}
           />
-          <Button variant="outline" onClick={() => fileInput.current?.click()}>
+          <Button
+            variant="outline"
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
+            onClick={() => fileInput.current?.click()}
+          >
             <Upload /> Import
           </Button>
           <Button
             variant="outline"
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
             onClick={handleExportJson}
             disabled={noRoles && Object.keys(squadPlan.assignments).length === 0}
           >
             <Download /> Export
           </Button>
-          <Button variant="outline" onClick={() => setDummyOpen(true)}>
-            <UserPlus /> Dummy-Spieler
+          <Button
+            variant="outline"
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
+            onClick={() => setDummyOpen(true)}
+          >
+            <UserPlus />{' '}
+            <span className="hidden sm:inline">Dummy-Spieler</span>
+            <span className="sm:hidden">Dummy</span>
           </Button>
-          <Button variant="outline" onClick={handleLoadTemplate}>
-            <LayoutTemplate /> Kategorien-Template
+          <Button
+            variant="outline"
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
+            onClick={handleLoadTemplate}
+          >
+            <LayoutTemplate />{' '}
+            <span className="hidden sm:inline">Kategorien-Template</span>
+            <span className="sm:hidden">Template</span>
           </Button>
-          <Button variant="outline" onClick={() => addSquadCategory()}>
+          <Button
+            variant="outline"
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
+            onClick={() => addSquadCategory()}
+          >
             <Plus /> Kategorie
           </Button>
-          <Button variant="outline" onClick={() => addSquadRole()}>
+          <Button
+            variant="outline"
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
+            onClick={() => addSquadRole()}
+          >
             <Plus /> Rolle
           </Button>
-          <Button variant="outline" onClick={resetSquadAssignments}>
-            <RotateCcw /> Zuweisungen leeren
+          <Button
+            variant="outline"
+            size="sm"
+            className="sm:h-9 sm:px-4 sm:text-sm"
+            onClick={resetSquadAssignments}
+          >
+            <RotateCcw />{' '}
+            <span className="hidden sm:inline">Zuweisungen leeren</span>
+            <span className="sm:hidden">Leeren</span>
           </Button>
         </div>
       </div>
@@ -621,9 +659,7 @@ export function Kaderplanung() {
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto rounded-md border bg-background p-2">
-            <div className="mx-auto w-full" style={{ maxWidth: SQUAD_BOARD_WIDTH }}>
-              <SquadPlanningBoard ref={boardRef} />
-            </div>
+            <SquadPlanningBoard ref={boardRef} />
           </div>
         </CardContent>
       </Card>

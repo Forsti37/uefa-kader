@@ -1108,33 +1108,6 @@
       ]
     },
     {
-      "id": "09417edd-bff9-4087-b492-d7af7967aa01",
-      "name": "Phillip Verhounig",
-      "birthDate": "2006-01-05",
-      "position": "FWD",
-      "isDummy": false,
-      "contracts": [
-        {
-          "id": "57401cf5-2c00-4f02-b4de-919a7cef4738",
-          "startDate": "2025-06-03",
-          "endDate": "2027-06-30",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        },
-        {
-          "id": "7b4f9684-18f9-4765-bdc8-ce1fdb9a60dd",
-          "startDate": "2020-02-03",
-          "endDate": "2025-06-03",
-          "clubId": "association_club",
-          "clubName": "FC Liefering",
-          "clubCategory": "ASSOCIATION_CLUB",
-          "isLoan": false
-        }
-      ]
-    },
-    {
       "id": "46240eff-94ee-4bc8-a94c-42feb57fc211",
       "name": "Yerwin Sulbarán",
       "birthDate": "2008-03-03",

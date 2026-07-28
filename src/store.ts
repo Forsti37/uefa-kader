@@ -119,7 +119,6 @@ const SALZBURG_CORE_EXCLUDED_NAME_FRAGMENTS = [
   'Matjašec',
   'Murillo',
   'Adejenughure',
-  'Verhounig',
   'Sulbarán',
 ] as const
 

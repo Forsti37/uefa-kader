@@ -42,8 +42,8 @@ function App() {
   const [page, setPage] = useState<PageId>('verwaltung')
 
   return (
-    <div className="flex min-h-svh flex-col bg-background text-foreground md:h-svh md:flex-row md:overflow-hidden">
-      <aside className="sticky top-0 z-30 flex flex-col gap-1 border-b bg-card p-3 sm:p-4 md:static md:h-svh md:w-64 md:shrink-0 md:border-b-0 md:border-r">
+    <div className="flex min-h-svh flex-col bg-background text-foreground md:flex-row">
+      <aside className="sticky top-0 z-30 flex flex-col gap-1 border-b bg-card p-3 sm:p-4 md:h-svh md:w-64 md:shrink-0 md:border-b-0 md:border-r">
         <div className="mb-2 flex items-center gap-3 px-2 md:mb-4">
           <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground md:h-10 md:w-10">
             <Shield className="h-5 w-5 md:h-6 md:w-6" />
@@ -98,7 +98,7 @@ function App() {
         </div>
       </aside>
 
-      <main className="flex min-h-0 flex-1 flex-col overflow-x-hidden md:h-svh md:overflow-y-auto">
+      <main className="flex min-h-0 flex-1 flex-col overflow-x-hidden">
         <TemplateUpdateBanner
           onOpenVerwaltung={() => setPage('verwaltung')}
           onOpenPlanung={() => setPage('planung')}

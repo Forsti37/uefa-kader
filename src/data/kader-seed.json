@@ -569,33 +569,6 @@
       ]
     },
     {
-      "id": "811ee527-ecde-4dcc-9d28-4977fe581286",
-      "name": "Valentin Sulzbacher",
-      "birthDate": "2005-03-11",
-      "position": "MID",
-      "isDummy": false,
-      "contracts": [
-        {
-          "id": "f17902f0-025e-4377-9325-7486a0ef7cc6",
-          "startDate": "2024-07-10",
-          "endDate": "2027-06-30",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        },
-        {
-          "id": "2e2a6ba8-c0b1-4f67-a8e0-620be860fdf8",
-          "startDate": "2015-08-19",
-          "endDate": "2024-07-10",
-          "clubId": "association_club",
-          "clubName": "FC Liefering",
-          "clubCategory": "ASSOCIATION_CLUB",
-          "isLoan": false
-        }
-      ]
-    },
-    {
       "id": "d23d62b0-2fab-4e97-91e3-37562c5cafc9",
       "name": "Justin Omoregie",
       "birthDate": "2003-09-21",

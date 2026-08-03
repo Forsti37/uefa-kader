@@ -75,7 +75,7 @@ export const SQUAD_ROLE_TEMPLATE_ASSIGNMENTS: Record<string, string[]> = {
   DM: ['Diabaté'],
   ZM: ['Barry', 'Mazurek', 'Kjaergaard'],
   OM: ['Kitano', 'Diakité', 'Matijasevic'],
-  LF: ['Daghim', 'Aguilar', 'Camara'],
+  LF: ['Aguilar', 'Camara'],
   RF: ['Baidoo', 'Redzic'],
   ST: ['Tabakovic', 'Vertessen', 'Konaté'],
 }

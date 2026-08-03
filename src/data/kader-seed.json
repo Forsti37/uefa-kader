@@ -758,42 +758,6 @@
       ]
     },
     {
-      "id": "25068b38-4f5e-469f-9312-47dcd8392fac",
-      "name": "Adam Daghim",
-      "birthDate": "2005-09-28",
-      "position": "FWD",
-      "isDummy": false,
-      "contracts": [
-        {
-          "id": "b9e4afc6-0852-451d-9a32-ada1ca65151d",
-          "startDate": "2026-07-07",
-          "endDate": "2028-06-30",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        },
-        {
-          "id": "ff8ec8f1-d9ab-4400-a72d-202c23c95fa6",
-          "startDate": "2025-09-02",
-          "endDate": "2026-07-07",
-          "clubId": "foreign_club",
-          "clubName": "VfL Wolfsburg",
-          "clubCategory": "FOREIGN_CLUB",
-          "isLoan": true
-        },
-        {
-          "id": "f69514b9-c565-46f7-8a9d-812f565fc113",
-          "startDate": "2023-09-01",
-          "endDate": "2025-09-02",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        }
-      ]
-    },
-    {
       "id": "a353b498-e8ba-4bad-9bd5-20d96f452b58",
       "name": "Damir Redzic",
       "birthDate": "2003-03-23",

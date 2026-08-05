@@ -67,16 +67,16 @@ const TEMPLATE_STRUCTURE: { category: string; roles: string[] }[] = [
  * Priorität). Werden gegen den aktuellen Kader gematcht.
  */
 export const SQUAD_ROLE_TEMPLATE_ASSIGNMENTS: Record<string, string[]> = {
-  TW: ['Zawieschitzky', 'Sarcevic'],
-  LV: ['Krätzig', 'Schmid'],
-  LIV: ['Mellberg', 'Zabransky', 'Blank'],
+  TW: ['Zawieschitzky', 'Früchtl', 'Sarcevic'],
+  LV: ['Schmid', 'Krätzig'],
+  LIV: ['Zabransky', 'Mellberg', 'Blank'],
   RIV: ['Boma', 'Chase', 'Drexler'],
   RV: ['Veratschnig', 'Lainer', 'Morgalla'],
   DM: ['Diabaté'],
   ZM: ['Barry', 'Mazurek', 'Kjaergaard'],
-  OM: ['Kitano', 'Diakité', 'Matijasevic'],
-  LF: ['Aguilar', 'Camara'],
-  RF: ['Baidoo', 'Redzic'],
+  OM: ['Diakité', 'Kitano', 'Matijašević'],
+  LF: ['Redzic', 'Aguilar', 'Camara', 'Vertessen'],
+  RF: ['Baidoo', 'Aguilar', 'Vertessen'],
   ST: ['Tabakovic', 'Vertessen', 'Konaté'],
 }
 

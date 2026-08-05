@@ -112,6 +112,7 @@ const TEMPLATE_PLAYERS: Player[] = kaderSeed.players as Player[]
 
 /** Spieler, die im Kernkader-Template (ohne Liefering) fehlen sollen. */
 const SALZBURG_CORE_EXCLUDED_NAME_FRAGMENTS = [
+  'Winklhofer',
   'Pokorny',
   'Traoré',
   'Aleksic',
@@ -142,6 +143,39 @@ export const TEMPLATE_PLAYER_COUNT_CORE = TEMPLATE_PLAYERS_CORE.filter(
 ).length
 
 const EMPTY_DRAFT: DraftState = { listA: [], listB: [] }
+
+/** Nicht auf A-/B-Liste vorbelegen (bleiben im Kader, aber unzugeordnet). */
+const UEFA_DRAFT_UNASSIGNED_NAME_FRAGMENTS = [
+  'Chase',
+  'Terzic',
+  'Blank',
+  'Moser',
+  'Omoregie',
+  'Gourna-Douath',
+  'Diambou',
+  'Jano',
+] as const
+
+function isUnassignedInUefaDraft(player: Player): boolean {
+  const name = foldPlayerName(player.name)
+  return UEFA_DRAFT_UNASSIGNED_NAME_FRAGMENTS.some((frag) =>
+    name.includes(foldPlayerName(frag)),
+  )
+}
+
+/** UEFA-Vorbelegung: alle auf A, Aguilar auf B; gelistete Spieler bleiben frei. */
+function createTemplateDraft(players: Player[]): DraftState {
+  const listA: string[] = []
+  const listB: string[] = []
+  const aguilar = foldPlayerName('Aguilar')
+  for (const p of players) {
+    if (p.isDummy) continue
+    if (isUnassignedInUefaDraft(p)) continue
+    if (foldPlayerName(p.name).includes(aguilar)) listB.push(p.id)
+    else listA.push(p.id)
+  }
+  return { listA, listB }
+}
 
 function stripPlayerFromAssignments(
   assignments: Record<string, string[]>,
@@ -354,17 +388,21 @@ export const useKaderStore = create<KaderStore>()(
 
       resetDraft: () => set({ draft: EMPTY_DRAFT }),
 
-      loadSalzburgTemplate: () =>
+      loadSalzburgTemplate: () => {
+        const players = structuredClone(TEMPLATE_PLAYERS)
         set({
-          players: structuredClone(TEMPLATE_PLAYERS),
-          draft: structuredClone(EMPTY_DRAFT),
-        }),
+          players,
+          draft: createTemplateDraft(players),
+        })
+      },
 
-      loadSalzburgCoreTemplate: () =>
+      loadSalzburgCoreTemplate: () => {
+        const players = structuredClone(TEMPLATE_PLAYERS_CORE)
         set({
-          players: structuredClone(TEMPLATE_PLAYERS_CORE),
-          draft: structuredClone(EMPTY_DRAFT),
-        }),
+          players,
+          draft: createTemplateDraft(players),
+        })
+      },
 
       clearKader: () =>
         set({

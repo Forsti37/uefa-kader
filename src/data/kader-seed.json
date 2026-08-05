@@ -29,6 +29,24 @@
       ]
     },
     {
+      "id": "3756e6ea-76c7-424b-b7b2-a30ff63ea0c5",
+      "name": "Christian Früchtl",
+      "birthDate": "2000-01-28",
+      "position": "GK",
+      "isDummy": false,
+      "contracts": [
+        {
+          "id": "943f3b74-39fb-43c4-8c39-14e8e62cb2f8",
+          "startDate": "2026-08-05",
+          "endDate": "2029-06-30",
+          "clubId": "fc_salzburg",
+          "clubName": "FC Red Bull Salzburg",
+          "clubCategory": "FC_SALZBURG",
+          "isLoan": false
+        }
+      ]
+    },
+    {
       "id": "08d6c48c-18c0-4718-8973-e1690360a40a",
       "name": "Nikola Sarcevic",
       "birthDate": "2006-12-27",
@@ -651,7 +669,7 @@
     },
     {
       "id": "19060f36-147e-400d-8c00-1ff9f2c490c2",
-      "name": "Filip Matijasevic",
+      "name": "Filip Matijašević",
       "birthDate": "2008-03-04",
       "position": "MID",
       "isDummy": false,
@@ -900,14 +918,6 @@
           "isLoan": false
         }
       ]
-    },
-    {
-      "id": "2d746add-17f1-4faf-8598-ccad238786af",
-      "name": "2er Keeper",
-      "birthDate": "1996-01-01",
-      "position": "GK",
-      "isDummy": true,
-      "contracts": []
     },
     {
       "id": "cd2144ca-e0d6-4d51-8fb8-36bee0bc4c61",

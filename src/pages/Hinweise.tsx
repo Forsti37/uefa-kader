@@ -55,9 +55,10 @@ export function Hinweise() {
 
       <Section title="Template & eigene Daten">
         <p>
-          Das FC-Salzburg-Template ist ein optionaler Startpunkt. Die
-          UEFA-Registrierung (A-/B-Liste) startet dabei leer – die Zuordnung
-          machst du selbst.
+          Das FC-Salzburg-Template ist ein optionaler Startpunkt. Beim Laden
+          werden A- und B-Liste vorbelegt (aktuell: alle A, Aguilar B; einige
+          Spieler bleiben unzugeordnet) – du kannst die Zuordnung danach
+          jederzeit ändern.
         </p>
         <p>
           Was du speicherst, exportierst oder weitergibst, liegt in deiner

@@ -686,51 +686,6 @@
       ]
     },
     {
-      "id": "bf252e52-85fc-4e3d-bcfd-f841cef2f41b",
-      "name": "Zeteny Jano",
-      "birthDate": "2005-03-13",
-      "position": "MID",
-      "isDummy": false,
-      "contracts": [
-        {
-          "id": "9984f618-ecbe-4145-a6e9-3acc0560c15e",
-          "startDate": "2026-07-01",
-          "endDate": "2027-06-30",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        },
-        {
-          "id": "97780006-8434-4b70-bab4-d8b6f4ec5b4d",
-          "startDate": "2025-02-03",
-          "endDate": "2026-07-01",
-          "clubId": "association_club",
-          "clubName": "GAK 1902",
-          "clubCategory": "ASSOCIATION_CLUB",
-          "isLoan": true
-        },
-        {
-          "id": "1a11950c-bb8c-4d02-97b9-85cfd23266cb",
-          "startDate": "2023-07-10",
-          "endDate": "2025-02-03",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        },
-        {
-          "id": "ebc283f4-a7f5-41e2-bba1-de9f81d58b26",
-          "startDate": "2018-08-10",
-          "endDate": "2023-07-10",
-          "clubId": "association_club",
-          "clubName": "FC Liefering",
-          "clubCategory": "ASSOCIATION_CLUB",
-          "isLoan": false
-        }
-      ]
-    },
-    {
       "id": "834f8dfa-8575-4e71-b409-011a48e356ec",
       "name": "Johannes Moser",
       "birthDate": "2008-01-16",

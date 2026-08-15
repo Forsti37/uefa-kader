@@ -147,7 +147,6 @@ const EMPTY_DRAFT: DraftState = { listA: [], listB: [] }
 /** Nicht auf A-/B-Liste vorbelegen (bleiben im Kader, aber unzugeordnet). */
 const UEFA_DRAFT_UNASSIGNED_NAME_FRAGMENTS = [
   'Chase',
-  'Terzic',
   'Blank',
   'Moser',
   'Omoregie',

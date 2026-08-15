@@ -281,24 +281,6 @@
       ]
     },
     {
-      "id": "6a65b28a-a973-4840-98a8-d32cf0ab94df",
-      "name": "Aleksa Terzic",
-      "birthDate": "1999-08-17",
-      "position": "DEF",
-      "isDummy": false,
-      "contracts": [
-        {
-          "id": "3d0896a3-0cc3-43ea-b6a5-cf3c15f41a44",
-          "startDate": "2023-07-27",
-          "endDate": "2028-06-30",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        }
-      ]
-    },
-    {
       "id": "b4ef6c43-1d3e-4f38-b58e-349aebf8e838",
       "name": "Leandro Morgalla",
       "birthDate": "2004-09-13",

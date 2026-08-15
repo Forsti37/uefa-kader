@@ -461,92 +461,20 @@
       ]
     },
     {
-      "id": "59219c9a-c1a9-4e4b-96bd-baf66b5b9e13",
-      "name": "Lucas Gourna-Douath",
-      "birthDate": "2003-08-05",
+      "id": "902aca69-7bd2-4808-bdb1-4a640e12cb47",
+      "name": "Umut Tohumcu",
+      "birthDate": "2004-08-11",
       "position": "MID",
       "isDummy": false,
       "contracts": [
         {
-          "id": "f75aae6d-8fc6-489e-9c0b-7ad7520c32c1",
-          "startDate": "2026-07-09",
+          "id": "c681346a-8659-4d61-8fe1-14f6779aeeda",
+          "startDate": "2026-08-15",
           "endDate": "2027-06-30",
           "clubId": "fc_salzburg",
           "clubName": "FC Red Bull Salzburg",
           "clubCategory": "FC_SALZBURG",
           "isLoan": false
-        },
-        {
-          "id": "ac4db14f-8df9-43b6-a2f7-8a334ab96b5d",
-          "startDate": "2026-01-20",
-          "endDate": "2026-07-09",
-          "clubId": "foreign_club",
-          "clubName": "Le Havre AC",
-          "clubCategory": "FOREIGN_CLUB",
-          "isLoan": true
-        },
-        {
-          "id": "3bfd01f6-71b0-4bcd-8b16-db36a9db7503",
-          "startDate": "2025-07-07",
-          "endDate": "2026-01-20",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        },
-        {
-          "id": "68bcefc7-aca4-4968-aca5-92691d0a390d",
-          "startDate": "2025-02-04",
-          "endDate": "2025-07-07",
-          "clubId": "foreign_club",
-          "clubName": "ROMA SPA",
-          "clubCategory": "FOREIGN_CLUB",
-          "isLoan": false
-        },
-        {
-          "id": "3c82985f-d8d9-4d92-9f0c-d28f4764d82d",
-          "startDate": "2022-07-21",
-          "endDate": "2025-02-04",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        }
-      ]
-    },
-    {
-      "id": "3609eb8a-7d34-4d85-bb6c-53a17b24d1e1",
-      "name": "Mamady Diambou",
-      "birthDate": "2002-11-11",
-      "position": "MID",
-      "isDummy": false,
-      "contracts": [
-        {
-          "id": "87306936-135a-4568-af1d-8ef918465ba5",
-          "startDate": "2023-07-20",
-          "endDate": "2028-06-30",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        },
-        {
-          "id": "c07bf2ab-75c2-4bf7-8417-6ea5424e666b",
-          "startDate": "2021-01-15",
-          "endDate": "2023-01-19",
-          "clubId": "fc_salzburg",
-          "clubName": "FC Red Bull Salzburg",
-          "clubCategory": "FC_SALZBURG",
-          "isLoan": false
-        },
-        {
-          "id": "81efceb9-e2a3-41a5-9f74-2554c75b7009",
-          "startDate": "2023-01-19",
-          "endDate": "2023-07-20",
-          "clubId": "foreign_club",
-          "clubName": "FC Luzern",
-          "clubCategory": "FOREIGN_CLUB",
-          "isLoan": true
         }
       ]
     },

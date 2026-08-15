@@ -151,8 +151,6 @@ const UEFA_DRAFT_UNASSIGNED_NAME_FRAGMENTS = [
   'Blank',
   'Moser',
   'Omoregie',
-  'Gourna-Douath',
-  'Diambou',
 ] as const
 
 function isUnassignedInUefaDraft(player: Player): boolean {

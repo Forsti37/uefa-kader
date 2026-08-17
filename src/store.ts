@@ -12,7 +12,13 @@ import type {
   SquadRole,
 } from '@/types'
 import kaderSeed from '@/data/kader-seed.json'
-import { createEmptySquadPlan, createFullSquadTemplate, foldPlayerName, normalizeSquadPlan } from '@/lib/squadRoles'
+import {
+  createEmptySquadPlan,
+  createFullSquadTemplate,
+  findPlayerByNameFragment,
+  foldPlayerName,
+  normalizeSquadPlan,
+} from '@/lib/squadRoles'
 import {
   cloneSlotTemplates,
   createSlotsForFormation,
@@ -144,33 +150,57 @@ export const TEMPLATE_PLAYER_COUNT_CORE = TEMPLATE_PLAYERS_CORE.filter(
 
 const EMPTY_DRAFT: DraftState = { listA: [], listB: [] }
 
-/** Nicht auf A-/B-Liste vorbelegen (bleiben im Kader, aber unzugeordnet). */
-const UEFA_DRAFT_UNASSIGNED_NAME_FRAGMENTS = [
-  'Chase',
-  'Blank',
-  'Moser',
-  'Omoregie',
+/** UEFA A-Liste: 4 CTP + 4 ATP + 17 Non-Local. */
+const UEFA_DRAFT_LIST_A_NAME_FRAGMENTS = [
+  'Mellberg',
+  'Lainer',
+  'Kjærgaard',
+  'Konaté',
+  'Zawieschitzky',
+  'Sarcevic',
+  'Veratschnig',
+  'Zabransky',
+  'Früchtl',
+  'Schmid',
+  'Krätzig',
+  'Boma',
+  'Morgalla',
+  'Drexler',
+  'Barry',
+  'Mazurek',
+  'Matijašević',
+  'Kitano',
+  'Tohumcu',
+  'Camara',
+  'Redzic',
+  'Baidoo',
+  'Tabaković',
+  'Sulbarán',
+  'Vertessen',
 ] as const
 
-function isUnassignedInUefaDraft(player: Player): boolean {
-  const name = foldPlayerName(player.name)
-  return UEFA_DRAFT_UNASSIGNED_NAME_FRAGMENTS.some((frag) =>
-    name.includes(foldPlayerName(frag)),
-  )
+const UEFA_DRAFT_LIST_B_NAME_FRAGMENTS = ['Aguilar'] as const
+
+function collectDraftIds(
+  players: Player[],
+  fragments: readonly string[],
+): string[] {
+  const ids: string[] = []
+  for (const frag of fragments) {
+    const player = findPlayerByNameFragment(players, frag)
+    if (!player || player.isDummy) continue
+    if (ids.includes(player.id)) continue
+    ids.push(player.id)
+  }
+  return ids
 }
 
-/** UEFA-Vorbelegung: alle auf A, Aguilar auf B; gelistete Spieler bleiben frei. */
+/** UEFA-Vorbelegung: feste A-Liste, Aguilar B; übrige bleiben unzugeordnet. */
 function createTemplateDraft(players: Player[]): DraftState {
-  const listA: string[] = []
-  const listB: string[] = []
-  const aguilar = foldPlayerName('Aguilar')
-  for (const p of players) {
-    if (p.isDummy) continue
-    if (isUnassignedInUefaDraft(p)) continue
-    if (foldPlayerName(p.name).includes(aguilar)) listB.push(p.id)
-    else listA.push(p.id)
+  return {
+    listA: collectDraftIds(players, UEFA_DRAFT_LIST_A_NAME_FRAGMENTS),
+    listB: collectDraftIds(players, UEFA_DRAFT_LIST_B_NAME_FRAGMENTS),
   }
-  return { listA, listB }
 }
 
 function stripPlayerFromAssignments(

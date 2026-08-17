@@ -56,8 +56,8 @@ export function Hinweise() {
       <Section title="Template & eigene Daten">
         <p>
           Das FC-Salzburg-Template ist ein optionaler Startpunkt. Beim Laden
-          werden A- und B-Liste vorbelegt (aktuell: alle A, Aguilar B; einige
-          Spieler bleiben unzugeordnet) – du kannst die Zuordnung danach
+          werden A- und B-Liste vorbelegt (aktuell: 25er A-Liste nach UEFA-Kontingent,
+          Aguilar B; übrige unzugeordnet) – du kannst die Zuordnung danach
           jederzeit ändern.
         </p>
         <p>
